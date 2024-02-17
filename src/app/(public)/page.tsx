@@ -16,9 +16,13 @@ export default function page({}: Props) {
   return (
     <main>
       <div
-        className="bg-gradient-to-tr from-white to-purple-50"
-        // className="bg-gradient-to-tr from-[#F9E7D6] "
-        style={{ backgroundImage: 'linear-gradient(top right , white, #F3FEF9  #FFE0FA)' }}
+        // background: linear-gradient(115.7deg, #FCFCE9 0%, rgba(255, 243, 247, 0.470053) 53.34%, #F0FFFC 100.66%);
+
+        // className="bg-gradient-to-tr from-purple-50 to-purple-100"
+        style={{
+          background:
+            'linear-gradient(115.7deg, #FCFCE9 0%, rgba(255, 243, 247, 0.470053) 53.34%, #F0FFFC 100.66%)',
+        }}
       >
         <Navbar />
         <Hero />

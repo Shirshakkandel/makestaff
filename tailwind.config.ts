@@ -84,7 +84,10 @@ const config = {
     ({ addUtilities }: any) => {
       addUtilities({
         '.container-custom': {
-          '@apply max-w-[1536px] px-6 lg:px-20 xl:px-[85px]  mx-auto': {},
+          '@apply max-w-[1536px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
+        },
+        '.container-customNoMaxWidth': {
+          '@apply px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
         '.container-custom2': {
           '@apply max-w-[1800px] mx-auto': {},

@@ -14,25 +14,26 @@ right Log in and Sign up
 export default function Navbar({}: Props) {
   //SECTION::UI PART
   return (
-    <header className=" py-4 container-custom ">
-      <div className="w-full flex items-center justify-between">
+    <header className=" pt-4 container-custom ">
+      <div className="flex w-full items-center justify-between">
         {/* LOGO */}
         <Image src={Logo.src} width={167} height={27} alt="Company Logo" />
 
         {/* Only Tablet NavItems */}
         <div className="hidden md:block">
-          <div className="flex gap-[11px] items-center">
+          <div className="flex items-center gap-[11px]">
             {/* Log In and Sign Up */}
             <Link
               href={'/login'}
-              className={`workSans text-base leading-[27px] font-[500] underline-offset-4 hover:underline`}
+              className={`workSans text-base font-[500] leading-[27px] underline-offset-4 hover:underline`}
             >
               Log In
             </Link>
 
+            {/* py-[18px] pl-[28px] pr-[17px] */}
             <Link
               href={'/login'}
-              className={`text-base leading-[26.8px]  font-[500] py-[18px] pl-[28px] pr-[17px] rounded-[2px] bg-white hover:bg-white/25 text-black`}
+              className={`inline-flex h-[48px] items-center justify-center   rounded-[2px] bg-white   py-[18px] pl-[28px] pr-[17px] text-[16px] font-[500] leading-[26.8px] text-black hover:bg-white/25`}
             >
               Sign Up
             </Link>

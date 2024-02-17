@@ -1,11 +1,7 @@
 import type { Metadata } from 'next';
-import { Work_Sans } from 'next/font/google';
-import localFont from 'next/font/local';
 import './globals.css';
 import { cn } from '@/lib/utils';
-
-const workSans = Work_Sans({ subsets: ['latin'] });
-// const sansSerifBookFLF = localFont({ src: './SansSerifBookFLF-Italic.otf' });
+import { workSans } from '@/lib/font';
 
 export const metadata: Metadata = {
   title: { default: 'MakeStaff', template: '%s | MakeStaff' },
