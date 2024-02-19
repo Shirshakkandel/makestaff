@@ -41,16 +41,16 @@ export default function CreateShareReviewTimeline({}: Props) {
   //TODO::UI PART
   return (
     <section className="mx-auto max-w-[1536px] ">
-      <div className="gap-100 flex  flex-col  lg:mt-0 lg:flex-row lg:items-stretch lg:justify-between 2xl:justify-center">
-        {/*COMPLETED:: 1)Top section or left Section */}
+      <div className="flex flex-col  gap-10  lg:mt-0 lg:flex-row lg:items-stretch lg:justify-between 2xl:justify-center">
+        {/*COMMENT:: 1)Top section or left Section */}
         <div
           style={{
             background:
               'linear-gradient(237.71deg, #FCE8DB 5.49%, #FCE8DB 5.49%, #FFFFF1 57.51%, #E8FCFF 105.23%)',
           }}
-          className=" relative flex-1 pb-[38px] container-left lg:pb-0"
+          className=" relative max-w-[800px] flex-1 pb-[38px] container-left lg:pb-0"
         >
-          {/* COMPLETED:: absolute Image Background and fixing export resolution. */}
+          {/* COMMENT:: absolute Image Background and fixing export resolution. */}
           <div className="absolute left-[30%] top-[-10%]  lg:top-[17%]">
             <Image
               src={CreateAndShareBackgroundSvg.src}
@@ -81,56 +81,58 @@ export default function CreateShareReviewTimeline({}: Props) {
           </div>
         </div>
 
-        {/* TODO:: Bottom Section or Right Section */}
-        <div className="flex-1 px-7 md:pr-[80px] lg:max-w-[600px] ">
+        {/* COMMENT:::: Bottom Section or Right Section */}
+        <div className="flex-1 px-7 pb-6 md:pr-[80px] lg:max-w-[620px] ">
           <div className="relative h-full w-full">
-            {/*TODO:: Middle line */}
+            {/*COMPLETED Middle line */}
             <div className="absolute  left-[48px] h-full border-l-2  border-dashed  border-black border-l-[1.] md:left-20 "></div>
             {/* Map each section */}
 
-            {data.map(({ id, image, description, title }, index) => {
-              const firstCard = index === 0;
-              const lastCard = index === data.length - 1;
-              return (
-                <div
-                  key={id}
-                  className={cn(
-                    'relative h-[230px] w-full sm:h-[365px]',
-                    firstCard && 'top-[33px] h-[260px] sm:h-[420px] md:top-[58px]',
-                    lastCard && 'h-[160px]  sm:h-[200px]',
-                  )}
-                >
-                  {/* Left number */}
-                  <p className="absolute text-[27px] font-[400] leading-[31px] md:text-[48px] md:leading-[56px]">
-                    {id}
-                  </p>
-
-                  {/* COMPLETED:: Circle  */}
-                  <div className="absolute left-[48px] top-[9px] h-4  w-4  translate-x-[-46%] rounded-full bg-black md:left-20 md:top-[16px]  md:h-5 md:w-5"></div>
-                  {/* Right section(title,description and image) */}
-                  <div className=" absolute left-[65px] sm:left-[115px]">
-                    <h4 className="text-[11.12px] font-[500] leading-[22.24px] sm:text-[20px] sm:leading-[40px]">
-                      {title}
-                    </h4>
-                    <p className="text-[10.01px] font-[400] leading-[17.79px] text-[#7D7D7D] sm:text-[18px] sm:leading-[32px]">
-                      {description}
+            {/* 3 steps  */}
+            <div className="space-y-3 lg:space-y-5">
+              {data.map(({ id, image, description, title }, index) => {
+                const firstCard = index === 0;
+                const lastCard = index === data.length - 1;
+                return (
+                  <div
+                    key={id}
+                    className={cn(
+                      'relative h-[230px] w-full sm:h-[365px]',
+                      firstCard && 'top-[33px] h-[260px] sm:h-[420px] md:top-[58px]',
+                      lastCard && 'h-[160px]  sm:h-[200px]',
+                    )}
+                  >
+                    {/* Left number */}
+                    <p className="absolute text-[27px] font-[400] leading-[31px] md:text-[48px] md:leading-[56px]">
+                      {id}
                     </p>
-                    <Image
-                      quality={100}
-                      width={435}
-                      height={276}
-                      src={image.src}
-                      alt={title}
-                      className={cn(
-                        'mt-2.5 aspect-[435/276] w-[242px]  sm:w-[435px]',
-                        lastCard &&
-                          'aspect-[435/110] h-[110px]  w-[242px] sm:aspect-[241/153] sm:w-[435px]',
-                      )}
-                    />
+                    {/* COMPLETED:: Circle  */}
+                    <div className="absolute left-[48px] top-[9px] h-4  w-4  translate-x-[-46%] rounded-full bg-black md:left-20 md:top-[16px]  md:h-5 md:w-5"></div>
+                    {/* Right section(title,description and image) */}
+                    <div className=" absolute left-[65px] sm:left-[115px]">
+                      <h4 className="text-[11.12px] font-[500] leading-[22.24px] sm:text-[20px] sm:leading-[40px]">
+                        {title}
+                      </h4>
+                      <p className="text-[10.01px] font-[400] leading-[17.79px] text-[#7D7D7D] sm:text-[18px] sm:leading-[32px]">
+                        {description}
+                      </p>
+                      <Image
+                        quality={100}
+                        width={435}
+                        height={276}
+                        src={image.src}
+                        alt={title}
+                        className={cn(
+                          'mt-2.5 aspect-[435/276] w-[242px]  sm:w-[435px]',
+                          lastCard &&
+                            'aspect-[435/110] h-[110px]  w-[242px] sm:aspect-[241/153] sm:w-[435px]',
+                        )}
+                      />
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
