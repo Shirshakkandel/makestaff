@@ -60,7 +60,7 @@ export default function EmpoweringWorkForce({}: Props) {
 
         {/* 2.2)Bottom or Right Section(Image) */}
         <div className="relative mt-14 flex-[0.53] lg:mr-[-5%]  lg:w-[110%]">
-          {/* TODO::1)Top color box */}
+          {/* COMPLETED::1)Top color box */}
           <div className="absolute left-[50%]  top-[-130px] aspect-[922/1180] w-[250px] md:w-[300px] lg:left-[15%]">
             <Image src={EmployerColorBoxCrop.src} fill alt="" />
           </div>
@@ -68,8 +68,8 @@ export default function EmpoweringWorkForce({}: Props) {
             quality={100}
             src={LaptopScreen.src}
             alt="Job Listing Laptop Frame"
-            width={710}
-            height={438}
+            width={1264}
+            height={776}
             className="relative z-30 aspect-[710/438]"
           />
         </div>
