@@ -86,6 +86,9 @@ const config = {
         '.container-custom': {
           '@apply max-w-[1536px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
+        '.container-left': {
+          '@apply pl-6 lg:pl-20 xl:pl-[85px]': {},
+        },
         '.container-customNoMaxWidth': {
           '@apply px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
