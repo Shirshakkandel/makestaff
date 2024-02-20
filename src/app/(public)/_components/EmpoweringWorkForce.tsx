@@ -4,7 +4,7 @@ import {
   ArrowRight,
   EmployerColorBoxCrop,
   LaptopScreen,
-  Quote,
+  Quote,  
   VectorLine,
 } from '../_images/LandingPage/EmpoweringWorkForce';
 import { Verified } from 'lucide-react';
@@ -13,7 +13,7 @@ type Props = {};
 /* STEPS  
 COMPLETED::1)Image download and export
 COMPLETED::2)Layout and content
-TODO::3)Styling   
+COMPLETED::3)Styling   
 */
 
 export default function EmpoweringWorkForce({}: Props) {
