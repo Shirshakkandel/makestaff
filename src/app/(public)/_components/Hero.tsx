@@ -68,7 +68,7 @@ export default function Hero({}: Props) {
         <div className="relative z-40 mx-auto w-[210px]  md:h-[437px]  md:w-[440px]">
           {/* Full color background */}
           <Image
-            priority={true}
+            // priority={true}
             quality={100}
             alt="Leyna"
             src={FullColorImageBackgroundCrop2.src}
@@ -86,7 +86,7 @@ export default function Hero({}: Props) {
               className="z-20 "
             />
             <Image
-              priority={true}
+              // priority={true}
               quality={70}
               alt="Leyna"
               src={ImageBottomOverlay.src}

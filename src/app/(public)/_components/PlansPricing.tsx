@@ -10,7 +10,7 @@ type Props = {};
 /*Steps  
 1.COMPLETED Data
 2.COMPLETED Layout
-3. Style  
+3.COMPLETED Style  
 */
 
 export default function PlansPricing({}: Props) {
@@ -51,7 +51,7 @@ export default function PlansPricing({}: Props) {
         </div>
       </div>
 
-      {/* TODO::2)Pricing Section */}
+      {/* COMPLETED::2)Pricing Section */}
       <div className=" mt-[30px] flex w-full flex-wrap justify-center gap-6 md:mt-10 lg:flex-row lg:flex-nowrap lg:justify-between  lg:gap-8 2xl:justify-center 2xl:gap-12">
         {/* <div className="mx-auto grid md:grid-cols-2 lg:grid-cols-3"> */}
         {PricingPlans.map(

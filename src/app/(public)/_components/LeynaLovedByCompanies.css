@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  th,
+  td {
+    @apply border-r border-black px-1 py-1  md:px-2 md:py-2;
+  }
+  th {
+    @apply font-[400];
+  }
+  td {
+    @apply font-[500];
+  }
+}
