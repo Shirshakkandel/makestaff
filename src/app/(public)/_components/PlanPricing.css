@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-pricing {
+    @apply mx-auto max-w-[1536px] px-6 lg:px-10 xl:px-[40px];
+  }
+  .pricing {
+    @apply mt-5 text-[27px] font-[550] leading-[16.66px] md:mt-[28px] md:text-[40px] md:leading-[24px];
+  }
+  .sub {
+    @apply align-baseline font-sansSerifBookFLF text-[12px] font-[500] leading-[16.66px] md:text-[16px] md:leading-[24px];
+  }
+  .margin-left {
+    @apply ml-[25px] xl:ml-[35px];
+  }
+  .margin-right {
+    @apply mr-[25px] xl:mr-[35px];
+  }
+  .padding-left {
+    @apply pl-[25px] xl:pl-[35px];
+  }
+}

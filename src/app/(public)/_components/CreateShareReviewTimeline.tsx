@@ -48,7 +48,7 @@ export default function CreateShareReviewTimeline({}: Props) {
             background:
               'linear-gradient(237.71deg, #FCE8DB 5.49%, #FCE8DB 5.49%, #FFFFF1 57.51%, #E8FCFF 105.23%)',
           }}
-          className=" relative max-w-[800px] flex-1 pb-[38px] container-left lg:pb-0"
+          className=" relative flex-1 pb-[38px] container-left lg:max-w-[800px] lg:pb-0"
         >
           {/* COMMENT:: absolute Image Background and fixing export resolution. */}
           <div className="absolute left-[30%] top-[-10%]  lg:top-[17%]">
@@ -103,7 +103,7 @@ export default function CreateShareReviewTimeline({}: Props) {
                     )}
                   >
                     {/* Left number */}
-                    <p className="absolute text-[27px] font-[400] leading-[31px] md:text-[48px] md:leading-[56px]">
+                    <p className="absolute font-workSans text-[27px] font-[400] leading-[31px] md:text-[48px] md:leading-[56px]">
                       {id}
                     </p>
                     {/* COMPLETED:: Circle  */}

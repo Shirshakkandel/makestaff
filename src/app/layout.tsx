@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { workSans } from '@/lib/font';
+import { sansSerifBookFLF, workSans } from '@/lib/font';
 
 export const metadata: Metadata = {
   title: { default: 'MakeStaff', template: '%s | MakeStaff' },
@@ -19,8 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          // sansSerifBookFLF.className,
-          workSans.className,
+          sansSerifBookFLF.variable,
+          workSans.variable,
           process.env.NODE_ENV === 'development' && 'debug-screens',
         )}
       >

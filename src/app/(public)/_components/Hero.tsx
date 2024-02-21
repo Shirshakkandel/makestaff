@@ -35,8 +35,8 @@ export default function Hero({}: Props) {
       </p>
 
       {/* 2)heading */}
-      <h1 className="  mt-4 max-w-[310px] text-center  text-[23px] font-[500] leading-[27px] text-[#492A2A]   md:mt-8 md:max-w-[40rem] md:text-[48px]  md:leading-[56.3px]">
-        Your <span className="font-[600]">digital</span> interviewer for the best candidates
+      <h1 className=" mt-4 max-w-[310px] text-center font-workSans  text-[23px] font-[500] leading-[27px] text-[#492A2A]   md:mt-8 md:max-w-[40rem] md:text-[48px]  md:leading-[56.3px]">
+        Your <span className="font-[700]">digital</span> interviewer for the best candidates
       </h1>
 
       {/* 2.1)Divider */}

@@ -4,7 +4,7 @@ import {
   ArrowRight,
   EmployerColorBoxCrop,
   LaptopScreen,
-  Quote,  
+  Quote,
   VectorLine,
 } from '../_images/LandingPage/EmpoweringWorkForce';
 import { Verified } from 'lucide-react';
@@ -25,7 +25,7 @@ export default function EmpoweringWorkForce({}: Props) {
         <Image src={VectorLine.src} fill alt="" />
       </div>
       {/* TODO::2)Section */}
-      <div className="flex flex-col container-custom lg:flex-row ">
+      <div className="flex flex-col overflow-hidden container-custom  lg:flex-row">
         {/* 2.1)Top or Left Section(header,paragraph and button) */}
         <div className="max-w-[85%] flex-[0.47] lg:mt-[40px] lg:max-w-none">
           <h3 className="relative text-[19px] font-[500] leading-[22px] md:text-[40px] md:leading-[56px] ">
@@ -59,7 +59,7 @@ export default function EmpoweringWorkForce({}: Props) {
         </div>
 
         {/* 2.2)Bottom or Right Section(Image) */}
-        <div className="relative mt-14 flex-[0.53] lg:mr-[-5%]  lg:w-[110%]">
+        <div className="relative mt-14 flex-[0.53]   lg:mr-[-5%] lg:w-[110%]">
           {/* COMPLETED::1)Top color box */}
           <div className="absolute left-[50%]  top-[-130px] aspect-[922/1180] w-[250px] md:w-[300px] lg:left-[15%]">
             <Image src={EmployerColorBoxCrop.src} fill alt="" />

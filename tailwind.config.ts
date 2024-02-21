@@ -54,8 +54,8 @@ const config = {
         },
       },
       fontFamily: {
-        workSans: ['var(--font-workSans)'],
-        sansSerifBookFLF: ['var(--font-sansSerifBookFLF)'],
+        workSans: ['var(--font-work-sans)'],
+        sansSerifBookFLF: ['var(--font-sanSerif-book)'],
       },
       borderRadius: {
         lg: 'var(--radius)',
