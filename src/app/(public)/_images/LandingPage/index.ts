@@ -9,7 +9,7 @@ import ImageBottomOverlay from './ImageBottomOverlay.png';
 import PhotoBackgroundSvg from './Photobackground.svg';
 import FullColorImageBackgroundSvg from './FullColorImageBackground.svg';
 import FullColorImageBackgroundCrop from './FullColorImageBackgroundCrop.svg';
-import FullColorImageBackgroundCrop2 from './FullColorImageBackgroundCrop2.svg';
+import FullColorImageBackgroundCrop2 from './FullColorImageBackgroundCrop.png';
 import Leyna40 from './Leyna40.svg';
 import Check from './check.svg';
 

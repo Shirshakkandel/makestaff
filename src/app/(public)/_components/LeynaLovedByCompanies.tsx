@@ -79,8 +79,7 @@ export default function LeynaLovedByCompanies({}: Props) {
           </div>
         </div>
       </section>
-
-      {/*SECTION::SECOND SECTION */}
+      {/*TODO::SECOND SECTION */}
       <section className="mt-5 container-custom lg:mt-14">
         {/* 614+536=> 1150 => 53.3% and 46.6% */}
         <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-14 xl:gap-[70px]">
@@ -112,7 +111,7 @@ export default function LeynaLovedByCompanies({}: Props) {
         </div>
       </section>
 
-      {/*TODO:: Third SECTION */}
+      {/*SECTION:: Third SECTION */}
     </section>
   );
 }

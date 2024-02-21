@@ -33,13 +33,15 @@ export default function HoursSave({}: Props) {
         <div className="relative mt-[34px] h-full w-full pb-[50px] lg:pb-[120px]">
           <div className="relative z-40 mx-auto w-[210px]  md:h-[437px]  md:w-[440px]">
             {/* Full color background */}
+
             <Image
               priority={true}
               quality={100}
               alt="Leyna"
               src={FullColorImageBackgroundCrop2.src}
-              fill
-              className="absolute top-[50%] z-40 mx-auto   flex items-center"
+              width={1318}
+              height={987}
+              className="absolute top-[17%] z-40 mx-auto flex aspect-[1318/987] w-full items-center"
             />
             {/* SECTION::Image with bottom overlay and  Hire Me Button */}
             <div className="relative z-40 mx-auto  aspect-[142/207] w-[160px]  md:aspect-[372/437] md:w-[372px]">
