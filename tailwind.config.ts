@@ -99,7 +99,7 @@ const config = {
           '@apply px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
         '.container-custom2': {
-          '@apply max-w-[1800px] mx-auto': {},
+          '@apply mx-auto max-w-[1536px] px-6 lg:px-10 xl:px-[40px]': {},
         },
         '.container-custom3': {
           '@apply max-w-[1000px] mx-auto': {},
