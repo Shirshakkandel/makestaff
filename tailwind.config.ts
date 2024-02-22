@@ -86,8 +86,14 @@ const config = {
         '.container-custom': {
           '@apply max-w-[1536px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
+        '.mdMaxWidth': {
+          '@apply w-full max-w-[614px] lg:max-w-none': {},
+        },
         '.container-left': {
           '@apply pl-6 lg:pl-20 xl:pl-[85px]': {},
+        },
+        '.container-right': {
+          '@apply pr-6 lg:pr-20 xl:pr-[85px]': {},
         },
         '.container-customNoMaxWidth': {
           '@apply px-6 lg:px-20 xl:px-[85px] mx-auto': {},

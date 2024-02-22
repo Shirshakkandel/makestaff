@@ -65,8 +65,8 @@ export default function Hero({}: Props) {
 
         {/* COMPLETED::Background Color */}
 
-        <div className="relative z-40 mx-auto w-[210px]  md:h-[437px]  md:w-[440px]">
-          {/* Full color background */}
+        <div className="relative z-40 mx-auto w-[210px]  md:h-[437px]  md:w-[500px]">
+          {/* FIXED:: Full color background(Fixed position problem after changing 3MB svg to 50KB Png (fixed by 500width in md) */}
           <Image
             priority={true}
             quality={100}

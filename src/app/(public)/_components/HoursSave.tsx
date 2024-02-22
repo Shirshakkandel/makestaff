@@ -29,9 +29,9 @@ export default function HoursSave({}: Props) {
           lineClassName="border-[#D4D4D4]"
         />
 
-        {/* TODO::Leyna Image */}
+        {/* FIXED::Leyna Image */}
         <div className="relative mt-[34px] h-full w-full pb-[50px] lg:pb-[120px]">
-          <div className="relative z-40 mx-auto w-[210px]  md:h-[437px]  md:w-[440px]">
+          <div className="relative z-40 mx-auto w-[210px]  md:h-[437px]  md:w-[500px]">
             {/* Full color background */}
 
             <Image
