@@ -32,6 +32,7 @@ export default function LeynaLovedByCompanies({}: Props) {
           background:
             'linear-gradient(115.7deg, #FCFCE9 0%, rgba(255, 243, 247, 0.470053) 53.34%, #F0FFFC 100.66%)',
         }}
+        className="pb-5 lg:pb-[55px]"
       >
         <section className="container-custom">
           <div className=" flex flex-row items-center justify-between  ">
@@ -121,7 +122,7 @@ export default function LeynaLovedByCompanies({}: Props) {
           background:
             'linear-gradient(237.71deg, #FCE8DB 5.49%, #FCE8DB 5.49%, #FFFFF1 57.51%, #E8FCFF 105.23%)',
         }}
-        className="mt-5 lg:mt-[55px]"
+        className=" "
       >
         <div className="mx-auto  flex max-w-[1536px] flex-col items-center gap-7 lg:flex-row lg:gap-[100px] xl:gap-[133px]">
           {/* Image with text overlay */}
