@@ -92,10 +92,10 @@ export default function LeynaLovedByCompanies({}: Props) {
               width={1842}
               height={1326}
               alt="Companies"
-              className="mdMaxWidth aspect-[314/226] w-full  shrink lg:aspect-[614/442] lg:w-[50%]  xl:w-[53%] xl:min-w-[612px]"
+              className="aspect-[314/226] w-full shrink  mdMaxWidth lg:aspect-[614/442] lg:w-[50%]  xl:w-[53%] xl:min-w-[612px]"
             />
             {/* Right Image overlay with absolute text */}
-            <div className="mdMaxWidth relative aspect-[313/254] w-full  shrink-0 lg:aspect-[536/435]  lg:w-[50%]  xl:w-[47%]">
+            <div className="relative aspect-[313/254] w-full shrink-0  mdMaxWidth lg:aspect-[536/435]  lg:w-[50%]  xl:w-[47%]">
               <Image fill src={PeopleCollection.src} alt="" />
               <div className="absolute left-[10%] top-[15%]">
                 {/* Play Icon */}
@@ -126,7 +126,7 @@ export default function LeynaLovedByCompanies({}: Props) {
       >
         <div className="mx-auto  flex max-w-[1536px] flex-col items-center gap-7 lg:flex-row lg:gap-[100px] xl:gap-[133px]">
           {/* Image with text overlay */}
-          <section className="mdMaxWidth relative aspect-[360/538] lg:aspect-[756/1131] lg:w-[64%]">
+          <section className="relative aspect-[360/538] mdMaxWidth lg:aspect-[756/1131] lg:w-[64%]">
             <Image alt="women Presenting" fill src={WomenPresentation.src} />
             {/* Absolute content section */}
             <div className="absolute left-[10%] top-[50%] w-[150px] md:w-[380px]">
@@ -136,7 +136,7 @@ export default function LeynaLovedByCompanies({}: Props) {
             </div>
           </section>
           {/* 3 Benefit content divide by divider component */}
-          <section className="mdMaxWidth container-right flex flex-col items-center gap-[34px] pb-4 md:gap-[55px] lg:w-[36%] lg:pb-0">
+          <section className="flex flex-col items-center gap-[34px] pb-4 mdMaxWidth container-right md:gap-[55px] lg:w-[36%] lg:pb-0">
             {LeynaThreeProcess.map(({ description, icon, titleSpan1, titleSpan2 }, index) => {
               const firstProcess = index === 0;
               const secondProcess = index === 1;

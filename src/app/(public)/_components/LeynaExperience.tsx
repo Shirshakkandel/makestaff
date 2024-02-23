@@ -4,8 +4,6 @@ import { Boy, Evaluation, MoneySvg, PlusSvg } from '../_images/LandingPage/Leyna
 import { Plus } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { PlusIcon } from '../_images/LandingPage';
-
 type Props = {};
 
 const ThreeFeatures = [
@@ -37,7 +35,7 @@ export default function LeynaExperience({}: Props) {
               backgroundImage:
                 'linear-gradient(180deg, #FFFFFF 0%, rgba(254, 254, 254, 0.33) 100%)',
             }}
-            className=" relative top-[40px] z-10 mx-auto w-fit bg-clip-text text-center text-[96px] font-[500] leading-[63px] text-transparent lg:top-[100px] lg:pt-[-20px] lg:text-[356px] lg:leading-[235px]"
+            className=" relative top-[40px] z-10 mx-auto w-fit bg-clip-text text-center text-[96px] font-[500] leading-[63px] text-transparent lg:top-[100px] lg:pt-[-20px] lg:text-[250px] lg:leading-[235px] xl:text-[356px]"
           >
             Leyna
           </p>
@@ -60,13 +58,15 @@ export default function LeynaExperience({}: Props) {
           </div>
 
           {/* COMMENT::3)Right Three Box */}
-          {/* 112px left from content and 201px width of box total right -313px */}
-          <div className="absolute right-[6px] top-7 flex flex-col gap-2.5 lg:right-[calc(-112px-201px)] lg:top-[-70px]">
+          {/*FIXED 112px left from content and 201px width of box total right -313px
+           but overflow happened in lg i reduced 100px in Leyna text and right position   */}
+          <div className="absolute right-[6px] top-7 flex flex-col gap-2.5 lg:right-[calc(-201px-6px)] lg:top-[-70px] xl:right-[calc(-112px-201px)]">
             {/* COMPLETED:: Loop on Features */}
             {ThreeFeatures.map(({ firstLine, icon, secondLine }, index) => {
               const first = index === 0;
               return (
                 <div
+                  key={index}
                   className={cn(
                     'flex h-[86px] w-[87px] flex-col  pl-2 pt-2.5 lg:h-[196px] lg:w-[201px] lg:pl-5 lg:pt-4',
                     first ? 'bg-[#FFFFFF]' : 'bg-[#FFFFFF80] ',
@@ -90,6 +90,7 @@ export default function LeynaExperience({}: Props) {
               );
             })}
           </div>
+
           {/* COMPLETED::4)Center Plus Icon */}
           <div className="absolute bottom-[5%] left-[50%]  flex  h-11 w-11 translate-x-[-50%] items-center justify-center rounded-full bg-[#FFFFFF9E] lg:h-20 lg:w-20">
             <img src={PlusSvg.src} alt="" className="h-4 w-4 lg:h-9 lg:w-9" />

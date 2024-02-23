@@ -13,7 +13,8 @@ import FullColorImageBackgroundCrop2 from './FullColorImageBackgroundCrop.png';
 import Leyna40 from './Leyna40.svg';
 import Check from './check.svg';
 import PlusIcon from './PlusIcon.png';
-
+import PeopleCollectionLanding from './PeopleCollection.png';
+import MenuSvg from './Menu.svg';
 export {
   Logo,
   Leyna,
@@ -30,4 +31,6 @@ export {
   Leyna40,
   Check,
   PlusIcon,
+  PeopleCollectionLanding,
+  MenuSvg,
 };

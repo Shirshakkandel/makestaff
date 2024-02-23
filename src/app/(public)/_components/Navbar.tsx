@@ -4,6 +4,7 @@ import { Logo } from '../_images/LandingPage';
 import { Button, buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import NavbarMobileMenu from './NavbarMobileMenu';
 
 type Props = {};
 
@@ -17,7 +18,13 @@ export default function Navbar({}: Props) {
     <header className=" pt-4 container-custom ">
       <div className="flex w-full items-center justify-between">
         {/* LOGO */}
-        <Image src={Logo.src} width={167} height={27} alt="Company Logo" />
+        <Image
+          src={Logo.src}
+          width={167}
+          height={27}
+          alt="Company Logo"
+          className="h-[16px] w-[100px] md:h-[27px] md:w-[167px]"
+        />
 
         {/* Only Tablet NavItems */}
         <div className="hidden md:block">
@@ -39,6 +46,8 @@ export default function Navbar({}: Props) {
           </div>
         </div>
         {/* Only Mobile Navbar Icon */}
+
+        <NavbarMobileMenu />
       </div>
     </header>
   );

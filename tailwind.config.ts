@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        '3xl': '1600px',
+        '4xl': '1920px',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -84,7 +88,7 @@ const config = {
     ({ addUtilities }: any) => {
       addUtilities({
         '.container-custom': {
-          '@apply max-w-[1536px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
+          '@apply max-w-[1920px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
         '.mdMaxWidth': {
           '@apply w-full max-w-[614px] lg:max-w-none': {},
