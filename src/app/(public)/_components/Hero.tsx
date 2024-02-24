@@ -84,7 +84,7 @@ export default function Hero({}: Props) {
               alt="Leyna"
               src={Leyna.src}
               fill
-              className="z-20 "
+              className="z-20"
             />
             <Image
               priority={true}

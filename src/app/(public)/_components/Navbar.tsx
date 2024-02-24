@@ -31,7 +31,7 @@ export default function Navbar({}: Props) {
           <div className="flex items-center gap-[11px]">
             {/* Log In and Sign Up */}
             <Link
-              href={'/#'}
+              href={'/employee-login'}
               className={`font-workSans text-base font-[500] leading-[27px] underline-offset-4 hover:underline`}
             >
               Log In
