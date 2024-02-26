@@ -194,7 +194,7 @@ export default function EmployeeLogin({}: Props) {
           </div>
 
           <Link
-            href={'#'}
+            href={'/staff-login'}
             className="h-[34px] w-[34px] rounded-[3px] border-[1px] border-[#71C4CF] bg-[#71C4CF38] flex-center md:h-12 md:w-12"
           >
             <Image alt="ArrowRight" src={ArrowRight.src} width={20} height={20} />
