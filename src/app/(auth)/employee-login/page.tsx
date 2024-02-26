@@ -17,7 +17,6 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
@@ -44,6 +43,7 @@ export default function EmployeeLogin({}: Props) {
     console.log(values);
   }
 
+  //SECTION::UI PART
   return (
     <section className="mt-[18px] container-custom lg:mt-[50px]">
       {/* 1)Top Menu Icon and close */}
@@ -59,6 +59,7 @@ export default function EmployeeLogin({}: Props) {
           />
         </div>
       </div>
+
       <section className=" sm:w-[70%] sm:min-w-[493px] lg:mx-0 ">
         {/* 2)Login In with Google and Microsoft */}
         <div className="mt-7 text-[19px] font-[400] lg:mt-12">
@@ -74,12 +75,14 @@ export default function EmployeeLogin({}: Props) {
             </button>
           </section>
         </div>
+
         {/*COMPLETED:: 3)Divider Or sign up with email */}
         <div className="mt-9 flex w-full items-center gap-1.5">
           <div className="h-[0.7px] w-1/2 bg-[#949494] md:h-[1px]"></div>
           <p className="shrink-0 text-xs text-[#949494] md:text-base">Or Sign up with Email</p>
           <div className="h-[0.7px] w-1/2 bg-[#949494] md:h-[1px]"></div>
         </div>
+
         {/* COMPLETED:: 4)Email and password,remember me forget password  */}
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-5 lg:mt-[54px]">
@@ -128,7 +131,7 @@ export default function EmployeeLogin({}: Props) {
                 </FormItem>
               )}
             />
-            {/* COMPLETED::CHECKBOX */}
+            {/* COMPLETED::CHECKBOX  and forget Password*/}
             <div className="mt-5 flex items-center justify-between text-xs text-[#949494] md:text-base">
               <FormField
                 control={form.control}
