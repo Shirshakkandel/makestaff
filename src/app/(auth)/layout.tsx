@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { Leyna } from '../(public)/_images/LandingPage';
-import { TopBackground } from '@/images/auth';
+import { Flower, TopBackground } from '@/images/auth';
 
 type Props = {
   children: React.ReactElement;
@@ -40,17 +40,31 @@ export default function AuthLayout({ children }: Props) {
 
         {/* Content */}
         <div className="ml-[24px] lg:ml-[77px]">
-          <p className="font-sansSerifBookFLF text-base font-[550] leading-[28px] md:text-[30px]">
+          <p className="mt-[34px] font-sansSerifBookFLF text-base font-[550] leading-[] text-[#171717] md:text-[30px]  lg:mt-[50px]">
             Hey
           </p>
-          <p className="">I’m Leyna</p>
-          <p>Your personal interviewer</p>
-          <p>Who will conduct the interview and shortlist the best fit for your company</p>
+          {/* Cap height Cap height */}
+          <p className="mt-5 text-[23px]  font-[600]  leading-[70%]  md:text-[56px] lg:mt-7 ">
+            I’m Leyna
+          </p>
+          <p className="mt-5 inline-flex flex-col font-sansSerifBookFLF  text-[16px]  font-[550] leading-[18px] text-black md:mt-7 md:text-[28px] md:leading-[30px]">
+            Your personal <span className="font-sansSerifBookFLF">interviewer</span>
+          </p>
+          <p className="mt-7 max-w-[226px] text-xs leading-[18px] md:mt-[70px] md:max-w-[301px] md:text-base">
+            Who will conduct the interview and shortlist the best fit for your company
+          </p>
         </div>
 
         {/* Right Flower */}
+        <Image
+          alt="flower"
+          src={Flower.src}
+          width={188}
+          height={200}
+          className="ml-auto mr-3 aspect-[82/74] w-[20%] min-w-[82px]"
+        />
       </div>
-      {/*TODO::Right or Bottom  Section*/}
+      {/*TODO::Right or Bottom  Section 82/360=22%*/}
       <div className="w-full  lg:w-[55%]">{children}</div>
     </main>
   );
