@@ -29,7 +29,7 @@ export default function AuthLayout({ children }: Props) {
 
         {/* Image 211/360=> 58.6%, lg: 301/641 =>47% */}
         <div className="relative ml-[24px] mt-[70px] aspect-[211/307] w-[211px] min-w-[58%] lg:ml-[77px] lg:aspect-[301/438] lg:w-[301px] lg:min-w-[47%] ">
-          <Image alt="Leyna" src={Leyna.src} fill />
+          <Image alt="Leyna" src={Leyna.src} fill priority />
           <div
             style={{
               background: 'linear-gradient(180deg, rgba(226, 241, 243, 0) 31.73%, #D6F5FE 100%)',
