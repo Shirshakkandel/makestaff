@@ -45,7 +45,7 @@ export default function EmployeeLogin({}: Props) {
 
   //SECTION::UI PART
   return (
-    <section className="mt-[18px] container-custom lg:mt-[50px]">
+    <section className="mt-[18px] pb-4  container-custom lg:mt-[50px] lg:pb-0">
       {/* 1)Top Menu Icon and close */}
       <div className="flex items-center justify-between">
         <Image width={167} height={27} src={Logo.src} alt="logo" />
