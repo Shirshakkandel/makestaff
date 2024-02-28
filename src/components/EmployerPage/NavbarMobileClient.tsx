@@ -29,7 +29,7 @@ export default function NavbarMobileMenu({}: Props) {
 
   //SECTION:: UI PART
   return (
-    <div className="md:hidden">
+    <div>
       <Image
         className="w- h-8 cursor-pointer"
         onClick={toggleMenu}
@@ -72,7 +72,7 @@ export default function NavbarMobileMenu({}: Props) {
                 </div>
                 {/*TODO:: 2)Middle NavItem */}
                 {navItems.map(({ link, title }) => (
-                  <div className="my-4 flex flex-col items-start gap-4">
+                  <div className="my-4 flex flex-col items-start gap-4" key={title}>
                     <Link
                       key={title}
                       className={cn(

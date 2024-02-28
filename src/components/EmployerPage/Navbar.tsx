@@ -79,7 +79,7 @@ export default function Navbar({}: Props) {
         </div>
 
         {/* 4)Mobile 3 line icon*/}
-        <div className="only-mobile">
+        <div className="lg:hidden">
           <NavbarMobileClient />
         </div>
 

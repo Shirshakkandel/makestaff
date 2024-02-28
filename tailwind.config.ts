@@ -19,13 +19,16 @@ const config = {
     },
     extend: {
       screens: {
-        '3xl': '1600px',
-        '4xl': '1920px',
+        '3xl': '1440px',
+        '4xl': '1600px',
+        '5xl': '1920px',
       },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        text: '#171717',
+        heading: '#040404',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
