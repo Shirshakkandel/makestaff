@@ -74,6 +74,7 @@ export default function NavbarMobileMenu({}: Props) {
                 {navItems.map(({ link, title }) => (
                   <div className="my-4 flex flex-col items-start gap-4">
                     <Link
+                      key={title}
                       className={cn(
                         buttonVariants({ variant: 'link' }),
                         ' flex w-full justify-start text-left font-sansSerifBookFLF text-[20px] font-[550]',

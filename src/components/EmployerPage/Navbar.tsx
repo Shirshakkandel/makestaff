@@ -41,6 +41,7 @@ export default function Navbar({}: Props) {
             {navItems.map(({ link, title }) => {
               return (
                 <Link
+                  key={title}
                   className={cn(
                     buttonVariants({ variant: 'link' }),
                     'font-sansSerifBookFLF text-[20px] font-[550]',
