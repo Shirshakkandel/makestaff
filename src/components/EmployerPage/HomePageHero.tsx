@@ -8,9 +8,7 @@ import {
   Jenny,
   Student,
 } from '@/images/employerPage/HomePage';
-import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { FaArrowRightLong } from 'react-icons/fa6';
 
 type Props = {};
 
