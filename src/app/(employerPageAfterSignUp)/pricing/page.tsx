@@ -10,7 +10,7 @@ import '@/app/(public)/_components/PlanPricing.css';
 
 type Props = {};
 
-export default function page({}: Props) {
+export default function Pricing({}: Props) {
   //SECTION::LOGIC PART
   const [isYearly, setIsYearly] = useState(false);
   const togglePricingPeriod = (value: boolean) => {
