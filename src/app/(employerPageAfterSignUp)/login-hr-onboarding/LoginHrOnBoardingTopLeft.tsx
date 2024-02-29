@@ -165,6 +165,7 @@ export default function LoginHrOnBoardingTopLeft({}: Props) {
           <Image
             src={HrWomen.src}
             width={762}
+            priority
             height={909}
             alt="Women Holding Laptop"
             className="aspect-[158/189] w-[46%] "
