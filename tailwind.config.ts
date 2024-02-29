@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        xxs: '10px',
+      },
       screens: {
         '3xl': '1440px',
         '4xl': '1600px',
