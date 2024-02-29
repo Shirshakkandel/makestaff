@@ -90,7 +90,7 @@ export default function LoginHrOnBoardingTopLeft({}: Props) {
         {/* 1.2)Finished Feature section */}
         <div className="relative z-10 mt-8 flex flex-col gap-5">
           {features.map(({ image, title }) => (
-            <div className="flex gap-2  md:gap-3 lg:gap-4">
+            <div key={title} className="flex gap-2  md:gap-3 lg:gap-4">
               {/* 1)Left Section */}
               <div className="flex aspect-[302/48] w-[50.8%] min-w-[183px] items-center gap-1 rounded-[10px] bg-white px-2 py-1  md:w-[40%] md:min-w-[302px] md:gap-5">
                 <Image
@@ -195,6 +195,7 @@ export default function LoginHrOnBoardingTopLeft({}: Props) {
               const lastValue = value === 3;
               return (
                 <div
+                  key={value}
                   className={cn(
                     'rounded-2.5 h-1 w-[34px]',
                     lastValue ? 'bg-[#71C4CF]' : 'bg-white',
