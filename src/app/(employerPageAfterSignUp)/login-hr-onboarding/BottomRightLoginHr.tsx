@@ -69,7 +69,7 @@ export default function BottomRightLoginHr({}: Props) {
           <p className="shrink-0 text-xs text-[#949494] md:text-base">Or Sign up with Email</p>
           <div className="h-[0.7px] w-1/2 bg-[#949494] md:h-[1px]"></div>
         </div>
-
+  
         {/* COMPLETED:: 4)Email and password,remember me forget password  */}
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-5 lg:mt-[54px]">

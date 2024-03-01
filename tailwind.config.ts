@@ -25,6 +25,8 @@ const config = {
         '3xl': '1440px',
         '4xl': '1600px',
         '5xl': '1920px',
+        '6xl': '2560px',
+        '7xl': '3840px',
       },
       colors: {
         border: 'hsl(var(--border))',
