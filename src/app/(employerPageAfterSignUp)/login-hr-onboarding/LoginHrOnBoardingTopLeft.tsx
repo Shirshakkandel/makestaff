@@ -52,12 +52,13 @@ export default function LoginHrOnBoardingTopLeft({}: Props) {
           alt="Lamp"
           className="absolute right-[1%] top-0 aspect-[49/124] w-[13%] min-w-[49px] md:right-[5%] md:w-[8%]"
         />
+
         <Image
           width={100}
           height={200}
           src={LampSvg.src}
           alt="Lamp"
-          className="absolute  right-[16%] top-0 aspect-[49/100] w-[13%] min-w-[49px] md:right-[15%] md:w-[8%]"
+          className="absolute   right-[16%] top-0 aspect-[49/100] w-[13%] min-w-[49px] md:right-[15%] md:w-[8%]"
         />
       </section>
 
@@ -100,7 +101,7 @@ export default function LoginHrOnBoardingTopLeft({}: Props) {
                   height={90}
                   className="aspect-[1/1] w-[5.5%] min-w-5 md:w-[9.9%] md:min-w-7"
                 />
-                <p className="text-xxs  font-[400] md:text-base 3xl:text-[clamp(16px,1vw,32px)]">
+                <p className="text-xxs  font-[400] md:text-base 3xl:text-[clamp(16px,1vw,32px)] ">
                   {title}
                 </p>
               </div>

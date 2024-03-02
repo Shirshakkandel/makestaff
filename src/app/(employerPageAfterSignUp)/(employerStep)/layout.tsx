@@ -13,7 +13,7 @@ type Props = {
 export default function AuthLayout({ children }: Props) {
   return (
     //Total 1440px=> left(641px)45% right 799px 55%
-    <main className=" flex min-h-[100vh] flex-col lg:flex-row">
+    <main className=" lg:justify-stat flex  flex-col lg:flex-row">
       {/*TODO:: Left or Top Section */}
       <div
         style={{
@@ -31,7 +31,7 @@ export default function AuthLayout({ children }: Props) {
         />
 
         {/* Image 211/360=> 58.6%, lg: 301/641 =>47% */}
-        <div className="relative ml-[24px] mt-[70px] aspect-[211/307] w-[211px] min-w-[58%] lg:ml-[77px] lg:aspect-[301/438] lg:w-[301px] lg:min-w-[47%] ">
+        <div className="relative ml-[24px] mt-[70px] aspect-[211/307] w-[211px] min-w-[58%] lg:ml-[77px] lg:aspect-[301/438] lg:min-w-[40%]  ">
           <Image alt="Leyna" src={Leyna.src} fill priority />
           <div
             style={{
@@ -64,9 +64,10 @@ export default function AuthLayout({ children }: Props) {
           src={Flower.src}
           width={188}
           height={200}
-          className="ml-auto mr-3 aspect-[82/74] w-[20%] min-w-[82px]"
+          className="ml-auto mr-3 aspect-[82/74] w-[20%] min-w-20"
         />
       </div>
+
       {/*TODO::Right or Bottom  Section 82/360=22%*/}
       <div className="w-full lg:w-[55%]">
         <PostCreationContextProvider>{children}</PostCreationContextProvider>

@@ -25,18 +25,49 @@ const PostCreationContext = createContext<PostCreationContextType | undefined>(u
 export type FormItems = {
   jobTitle: string;
   companySize: string;
-  applicationLimitCap: boolean;
-  postEndDate: boolean;
+  isApplicationLimitCap: boolean;
+  isPostEndDate: boolean;
   postType: 'company' | 'candidate';
   applicationLimitCapNumber?: string;
   actualPostEndDate?: string;
 };
 
+export const companySizeData = [
+  {
+    title: 'Less than 10',
+    value: '0-10',
+  },
+  {
+    title: '11-50',
+    value: '11-50',
+  },
+  {
+    title: '51-200',
+    value: '51-200',
+  },
+  {
+    title: '201-300',
+    value: '201-300',
+  },
+  {
+    title: '301-1000',
+    value: '301-1000',
+  },
+  {
+    title: '1001-5000',
+    value: '1001-5000',
+  },
+  {
+    title: 'More than 5000',
+    value: '5000-',
+  },
+] as const;
+
 const initialValues: FormItems = {
   jobTitle: '',
-  companySize: '',
-  applicationLimitCap: false,
-  postEndDate: false,
+  companySize: companySizeData[0].value,
+  isApplicationLimitCap: false,
+  isPostEndDate: false,
   postType: 'company',
 };
 
@@ -107,7 +138,7 @@ export const PostCreationContextProvider = ({ children }: { children: ReactEleme
 export const usePostCreationContext = () => {
   const context = useContext(PostCreationContext);
   if (!context) {
-    throw new Error('usePostCreationContext must be used within a PostCreationContextProvider');
+    throw new Error('usePostCreationContext  must be used within a PostCreationContextProvider');
   }
   return context;
 };

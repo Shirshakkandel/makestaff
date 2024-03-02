@@ -96,16 +96,16 @@ const config = {
     ({ addUtilities }: any) => {
       addUtilities({
         '.container-custom': {
-          '@apply max-w-[1920px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
+          '@apply max-w-[2560px] px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
         '.mdMaxWidth': {
           '@apply w-full max-w-[614px] lg:max-w-none': {},
         },
         '.container-left': {
-          '@apply pl-6 lg:pl-20 xl:pl-[85px]': {},
+          '@apply pl-3 lg:pl-10 xl:pl-[42px]': {},
         },
         '.container-right': {
-          '@apply pr-6 lg:pr-20 xl:pr-[85px]': {},
+          '@apply pr-3 lg:pr-10 xl:pr-[42px]': {},
         },
         '.container-customNoMaxWidth': {
           '@apply px-6 lg:px-20 xl:px-[85px] mx-auto': {},

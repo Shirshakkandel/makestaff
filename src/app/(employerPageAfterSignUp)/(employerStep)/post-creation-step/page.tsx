@@ -1,19 +1,11 @@
 'use client';
 
-import { useStepContext } from '@/context/stepContext';
 import React from 'react';
-
-import { AnimatePresence } from 'framer-motion';
-import {
-  ApplicationLimit,
-  CompanyOrCandidate,
-  CompanySize,
-  JobTitle,
-  Overview,
-} from '@/components/PostCreationStep';
-import usePostCreationLogic from '@/lib/hooks/usePostCreationLogic';
 import { Button } from '@/components/ui/button';
 import { usePostCreationContext } from '@/context/PostCreationContextProvider';
+
+import Image from 'next/image';
+import { ArrowBack, ArrowRightWhite } from '@/images/employerPage/PostCreationSteps';
 
 type Props = {};
 
@@ -44,33 +36,57 @@ export default function PostCreationStep({}: Props) {
       return true;
     }
   };
+  console.log(postValue);
 
   return (
     <form onSubmit={handleOnSubmit} className="h-full">
-      <div className="flex h-full flex-col ">
+      <div className="flex h-full flex-col">
         <div className="flex-1">{displayStepComponents(currentIndex)}</div>
+
         {/* Line Progress */}
-        <div className="">
+        <div className="mt-24">
           <div className="relative h-[3px] w-full bg-[#F0EBEB] ">
             <div
               className="absolute inset-0 bg-black transition"
               style={{ width: `${completePercentage}%` }}
             ></div>
           </div>
-          {/* Back and Next Button */}
-          <div className="flex justify-between">
+
+          {/*COMMENT:: Back and Next Button */}
+          <div className="mt-9 flex justify-between pb-6 container-left container-right lg:mt-14 lg:pb-10 xl:pb-[10%] ">
             {!isFirstStep && (
-              <button
+              <Button
+                className="space-x-1 text-base hover:no-underline"
+                variant={'link'}
                 type="button"
                 onClick={() => {
                   previousStep();
                 }}
               >
-                Back
-              </button>
+                <Image
+                  src={ArrowBack.src}
+                  width={40}
+                  height={40}
+                  alt="Arrow Right"
+                  className="inline-flex aspect-square w-5 "
+                />
+                <span>Back</span>
+              </Button>
             )}
-            <Button className="ml-auto" disabled={isNextSubmitDisable()} type="submit">
-              {isLastStep ? 'Submit' : 'Next'}
+
+            <Button
+              className="ml-auto space-x-1 rounded-[3px] px-5 text-base "
+              disabled={isNextSubmitDisable()}
+              type="submit"
+            >
+              <span>{isLastStep ? 'Submit' : 'Next'}</span>
+              <Image
+                src={ArrowRightWhite.src}
+                width={40}
+                height={40}
+                alt="Arrow Right"
+                className="inline-flex aspect-square w-5 "
+              />
             </Button>
           </div>
         </div>

@@ -7,10 +7,36 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import usePostCreationLogic from '@/lib/hooks/usePostCreationLogic';
+
 import { usePostCreationContext } from '@/context/PostCreationContextProvider';
 import Image from 'next/image';
-import { Closed } from '@/images/auth';
+
+import {
+  BackendJob,
+  FrontendJob,
+  SalesJob,
+  UIUxJob,
+} from '@/images/employerPage/PostCreationSteps';
+import PostCreationStepsWrapper from './PostCreationStepsWrapper';
+
+const jobTitle = [
+  {
+    title: 'Front-end Developer',
+    icon: FrontendJob,
+  },
+  {
+    title: 'Sales Manager',
+    icon: SalesJob,
+  },
+  {
+    title: 'UI/UX Designer',
+    icon: UIUxJob,
+  },
+  {
+    title: 'Back-end Developer',
+    icon: BackendJob,
+  },
+];
 
 type Props = {};
 /* Logic to implement.
@@ -20,42 +46,42 @@ type Props = {};
 */
 export default function JobTitle({}: Props) {
   const { updatePostValue, postValue } = usePostCreationContext();
+  // console.log({ postValue });
 
   return (
-    <main className="h-full  py-5 container-custom 2xl:pt-[5%]">
-      <div className="flex justify-end">
-        <div className="relative flex aspect-square w-[7.7%] min-w-[28px] justify-end rounded-full border-[1px] border-[#00000066] flex-center lg:w-[4%]">
-          <Image alt={Closed} src={Closed.src} width={32} height={32} className="w-[60%]" />
-        </div>
-      </div>
-      <section className="mt-[180px] lg:mt-[19%]">
-        <h1 className=" 3xl: text-base font-[500] leading-[50px] md:text-[32px] md:leading-[50px] 2xl:text-[clamp(32px,2vw+0.3rem,70px)] 2xl:leading-[130%]">
-          What’s the Job Title?
-        </h1>
-        <p className=" text-xs leading-[20px] md:text-base  2xl:mt-5 2xl:text-[clamp(1rem,2vw+0.2rem,2rem)] 2xl:leading-[130%]">
-          Give the title text here
-        </p>
+    <PostCreationStepsWrapper
+      title={'What’s the Job Title?'}
+      description="Give the title text here"
+    >
+      <Select
+        value={postValue.jobTitle}
+        required
+        onValueChange={value => updatePostValue({ jobTitle: value })}
+      >
+        <SelectTrigger className="h-12 w-full   md:w-[80%] lg:min-h-16 2xl:h-[5vh] ">
+          <SelectValue
+            className=""
+            placeholder="Eg. Frontend Developer, back-end developer, salesmen"
+          />
+        </SelectTrigger>
 
-        <div className="mt-6 w-full  lg:mt-14">
-          <Select
-            value={postValue.jobTitle}
-            required
-            onValueChange={value => updatePostValue({ jobTitle: value })}
-          >
-            <SelectTrigger className="h-12 w-full  md:w-[80%] lg:h-16 2xl:h-[6vh] ">
-              <SelectValue
-                className="placeholder:text-[#00000066]"
-                placeholder="Eg. Frontend Developer, back-end developer, salesmen"
-              />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </section>
-    </main>
+        <SelectContent>
+          {jobTitle.map(({ icon, title }, index) => (
+            <SelectItem value={title} key={index}>
+              <span className="flex items-center gap-2 text-base 3xl:text-[clamp(1rem,1vw+0.2rem,1.5rem)]">
+                <Image
+                  src={icon.src}
+                  alt={title}
+                  width={30}
+                  height={30}
+                  className="aspect-square  w-4 3xl:w-6 4xl:w-8 "
+                />
+                {title}
+              </span>
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </PostCreationStepsWrapper>
   );
 }
