@@ -6,21 +6,42 @@ import { usePostCreationContext } from '@/context/PostCreationContextProvider';
 
 import Image from 'next/image';
 import { ArrowBack, ArrowRightWhite } from '@/images/employerPage/PostCreationSteps';
+import {
+  ApplicationLimit,
+  CompanyOrCandidate,
+  CompanySize,
+  JobTitle,
+  Overview,
+} from '@/components/PostCreationStep';
+import { useToast } from '@/components/ui/use-toast';
+import { useRouter } from 'next/navigation';
 
 type Props = {};
 
 export default function PostCreationStep({}: Props) {
-  const {
-    currentIndex,
-    setCurrentIndex,
-    stepsNumber,
-    nextStep,
-    previousStep,
-    postValue,
-    displayStepComponents,
-  } = usePostCreationContext();
+  const { currentIndex, setCurrentIndex, stepsNumber, nextStep, previousStep, postValue } =
+    usePostCreationContext();
+  const router = useRouter();
+
+  const { toast } = useToast();
 
   //COMMENT::State
+  const displayStepComponents = (index: number) => {
+    switch (index) {
+      case 0:
+        return <JobTitle />;
+      case 1:
+        return <CompanySize />;
+      case 2:
+        return <ApplicationLimit />;
+      case 3:
+        return <CompanyOrCandidate />;
+      case 4:
+        return <Overview />;
+      default:
+        return null;
+    }
+  };
   const completePercentage = ((currentIndex + 1) / stepsNumber) * 100;
   const isFirstStep = currentIndex === 0;
   const isLastStep = currentIndex === stepsNumber - 1;
@@ -28,7 +49,35 @@ export default function PostCreationStep({}: Props) {
   //SECTION::Function handleOnSubmit
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    nextStep();
+    if (isLastStep) {
+      const { isApplicationLimitCap, isPostEndDate, applicationLimitCapNumber, actualPostEndDate } =
+        postValue;
+
+      //if no isApplicationLimit and isPostEndData then delete days, months, years
+      if (!isApplicationLimitCap) {
+        delete postValue.applicationLimitCapNumber;
+      }
+
+      if (!isPostEndDate) {
+        delete postValue.actualPostEndDate;
+        delete postValue.days;
+        delete postValue.months;
+        delete postValue.years;
+      }
+
+      toast({
+        title: 'You submitted the following values to backend:',
+        description: (
+          <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+            <code className="text-white">{JSON.stringify(postValue, null, 2)}</code>
+          </pre>
+        ),
+      });
+
+      router.push('/post-created');
+    } else {
+      nextStep();
+    }
   };
 
   const isNextSubmitDisable = () => {
@@ -37,7 +86,7 @@ export default function PostCreationStep({}: Props) {
     }
   };
   console.log(postValue);
-
+  //SECTION::UI PART
   return (
     <form onSubmit={handleOnSubmit} className="h-full">
       <div className="flex h-full flex-col">
@@ -79,7 +128,7 @@ export default function PostCreationStep({}: Props) {
               disabled={isNextSubmitDisable()}
               type="submit"
             >
-              <span>{isLastStep ? 'Submit' : 'Next'}</span>
+              <span>{currentIndex >= 2 ? 'Submit' : 'Next'}</span>
               <Image
                 src={ArrowRightWhite.src}
                 width={40}

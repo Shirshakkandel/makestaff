@@ -48,7 +48,7 @@ export default function CompanyOrCandidate({}: Props) {
             onClick={() => {
               updatePostValue({ postType: 'company' });
             }}
-          />
+          />  
           <CardSelect
             value="Candidate"
             description="I’m applying for a job at a company that uses Leyna.ai"

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { sansSerifBookFLF, workSans } from '@/lib/font';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: { default: 'MakeStaff', template: '%s | MakeStaff' },
@@ -24,6 +25,7 @@ export default function RootLayout({
           process.env.NODE_ENV === 'development' && 'debug-screens',
         )}
       >
+        <Toaster />
         {children}
       </body>
     </html>

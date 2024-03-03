@@ -34,6 +34,7 @@ const config = {
         ring: 'hsl(var(--ring))',
         text: '#171717',
         heading: '#040404',
+        textDim: '#00000066',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {

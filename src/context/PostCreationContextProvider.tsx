@@ -1,12 +1,20 @@
 'use client';
-import {
-  ApplicationLimit,
-  CompanyOrCandidate,
-  CompanySize,
-  JobTitle,
-  Overview,
-} from '@/components/PostCreationStep';
+import { companySizeData } from '@/components/PostCreationStep/CompanySize';
 import React, { ReactElement, createContext, useContext, useState } from 'react';
+
+//SECTION::Types
+export type FormItems = {
+  jobTitle: string;
+  companySize: string;
+  isApplicationLimitCap: boolean;
+  isPostEndDate: boolean;
+  postType: 'company' | 'candidate';
+  applicationLimitCapNumber?: string;
+  actualPostEndDate?: string;
+  days?: string;
+  months?: string;
+  years?: string;
+};
 
 type PostCreationContextType = {
   postValue: FormItems;
@@ -17,51 +25,12 @@ type PostCreationContextType = {
   nextStep: () => void;
   previousStep: () => void;
   setCurrentIndex: (index: number) => void;
-  displayStepComponents: (index: number) => ReactElement | null;
+  toggleApplicationLimitCap: (value: boolean) => void;
+  togglePostEndDate: (value: boolean) => void;
 };
 
+//SECTION::Creation of Context
 const PostCreationContext = createContext<PostCreationContextType | undefined>(undefined);
-
-export type FormItems = {
-  jobTitle: string;
-  companySize: string;
-  isApplicationLimitCap: boolean;
-  isPostEndDate: boolean;
-  postType: 'company' | 'candidate';
-  applicationLimitCapNumber?: string;
-  actualPostEndDate?: string;
-};
-
-export const companySizeData = [
-  {
-    title: 'Less than 10',
-    value: '0-10',
-  },
-  {
-    title: '11-50',
-    value: '11-50',
-  },
-  {
-    title: '51-200',
-    value: '51-200',
-  },
-  {
-    title: '201-300',
-    value: '201-300',
-  },
-  {
-    title: '301-1000',
-    value: '301-1000',
-  },
-  {
-    title: '1001-5000',
-    value: '1001-5000',
-  },
-  {
-    title: 'More than 5000',
-    value: '5000-',
-  },
-] as const;
 
 const initialValues: FormItems = {
   jobTitle: '',
@@ -71,25 +40,8 @@ const initialValues: FormItems = {
   postType: 'company',
 };
 
+//SECTION::Provider
 export const PostCreationContextProvider = ({ children }: { children: ReactElement }) => {
-  const [postValue, setPostValue] = useState<FormItems>(initialValues);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const displayStepComponents = (index: number) => {
-    switch (index) {
-      case 0:
-        return <JobTitle />;
-      case 1:
-        return <CompanySize />;
-      case 2:
-        return <ApplicationLimit />;
-      case 3:
-        return <CompanyOrCandidate />;
-      case 4:
-        return <Overview />;
-      default:
-        return null;
-    }
-  };
   const steps = [
     'Job Title',
     'Company Size',
@@ -97,7 +49,12 @@ export const PostCreationContextProvider = ({ children }: { children: ReactEleme
     'Company or Candidate',
     'Overview',
   ];
+
   const stepsNumber = steps.length;
+
+  //COMMENT::State Part
+  const [postValue, setPostValue] = useState<FormItems>(initialValues);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   //COMMENT::Function Part
   const updatePostValue = (value: Partial<FormItems>) => {
@@ -116,7 +73,15 @@ export const PostCreationContextProvider = ({ children }: { children: ReactEleme
     }
   };
 
-  //COMMENT::Context Type
+  const toggleApplicationLimitCap = (value: boolean) => {
+    updatePostValue({ ...postValue, isApplicationLimitCap: value });
+  };
+
+  const togglePostEndDate = (value: boolean) => {
+    updatePostValue({ ...postValue, isPostEndDate: value });
+  };
+
+  //COMMENT::Context Value
   const contextValue: PostCreationContextType = {
     postValue,
     currentIndex,
@@ -126,7 +91,8 @@ export const PostCreationContextProvider = ({ children }: { children: ReactEleme
     nextStep,
     previousStep,
     setCurrentIndex,
-    displayStepComponents,
+    toggleApplicationLimitCap,
+    togglePostEndDate,
   };
 
   //COMMENT::Return Type
@@ -135,6 +101,7 @@ export const PostCreationContextProvider = ({ children }: { children: ReactEleme
   );
 };
 
+//SECTION::HOOKS
 export const usePostCreationContext = () => {
   const context = useContext(PostCreationContext);
   if (!context) {

@@ -14,7 +14,7 @@ export default function ApplicationLimit({}: Props) {
   const togglePostEndDate = (value: boolean) => {
     updatePostValue({ ...postValue, isPostEndDate: value });
   };
-
+   
   return (
     <PostCreationStepsWrapper className="lg:mt-[99px] 3xl:mt-[12%]" title="Just few step...">
       <section className="mt-12 space-y-11 lg:mt-16">
@@ -38,7 +38,7 @@ export default function ApplicationLimit({}: Props) {
   );
 }
 
-const SwitchComponents = ({
+export const SwitchComponents = ({
   heading,
   paragraph,
   value,
