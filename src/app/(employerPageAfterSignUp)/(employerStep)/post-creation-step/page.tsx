@@ -22,7 +22,6 @@ export default function PostCreationStep({}: Props) {
   const { currentIndex, setCurrentIndex, stepsNumber, nextStep, previousStep, postValue } =
     usePostCreationContext();
   const router = useRouter();
-
   const { toast } = useToast();
 
   //COMMENT::State

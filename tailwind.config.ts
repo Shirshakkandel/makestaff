@@ -36,6 +36,7 @@ const config = {
         heading: '#040404',
         textDim: '#00000066',
         background: 'hsl(var(--background))',
+        background2: '#f7f7f9',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',

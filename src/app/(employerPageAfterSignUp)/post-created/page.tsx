@@ -1,7 +1,15 @@
+import PageLayout from '@/components/common/PageLayout';
 import React from 'react';
+import TopOrLeftComponent from './TopOrLeftComponent';
+import BottomOrRightComponent from './BottomOrRightComponent';
 
 type Props = {};
 
 export default function PostCreated({}: Props) {
-  return <div>PostCreated</div>;
+  return (
+    <PageLayout
+      topOrLeftComponents={<TopOrLeftComponent />}
+      bottomOrRightComponents={<BottomOrRightComponent />}
+    />
+  );
 }

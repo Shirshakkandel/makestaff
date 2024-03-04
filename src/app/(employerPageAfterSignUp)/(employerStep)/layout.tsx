@@ -13,7 +13,7 @@ type Props = {
 export default function AuthLayout({ children }: Props) {
   return (
     //Total 1440px=> left(641px)45% right 799px 55%
-    <main className=" lg:justify-stat flex  flex-col lg:flex-row">
+    <main className=" flex flex-col  lg:flex-row lg:justify-start">
       {/*TODO:: Left or Top Section */}
       <div
         style={{

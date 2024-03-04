@@ -11,7 +11,7 @@ export default function AuthLayout({ children }: Props) {
   return (
     //Total 1440px=> left(641px)45% right 799px 55%
     <main className=" flex min-h-[100vh] flex-col lg:flex-row">
-      {/*TODO:: Left or Top Section */}
+      {/*COMMENT:: Left or Top Section */}
       <div
         style={{
           background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
@@ -64,6 +64,7 @@ export default function AuthLayout({ children }: Props) {
           className="ml-auto mr-3 aspect-[82/74] w-[20%] min-w-[82px]"
         />
       </div>
+
       {/*TODO::Right or Bottom  Section 82/360=22%*/}
       <div className="w-full  lg:w-[55%]">{children}</div>
     </main>

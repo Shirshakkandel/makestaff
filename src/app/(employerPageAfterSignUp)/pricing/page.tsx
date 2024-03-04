@@ -31,6 +31,7 @@ export default function Pricing({}: Props) {
               Choose the best plan for you.
             </p>
           </div>
+          
           <div className="mt-5 flex items-center justify-center space-x-2.5 md:gap-3 lg:mt-9">
             <div
               className="cursor-pointer font-sansSerifBookFLF text-[14px] font-[550] leading-[62px] md:text-[24px] md:leading-[62px]"
