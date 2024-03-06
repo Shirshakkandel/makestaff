@@ -44,7 +44,8 @@ export default function WelcomeScreen({}: Props) {
         <div className="absolute left-[25%] top-0 hidden aspect-[1072/570] w-[75%]  lg:block">
           <Image alt="Background" src={WelcomeScreenBackground.src} fill className="" />
         </div>
-        <div className="absolute left-[25%] h-full border-[1px]"></div>
+        <div className="absolute bottom-0  left-[15%] top-0 hidden border-[1px] border-[#0000001A] lg:block xl:left-[21.5%]"></div>
+        <div className="absolute bottom-[10%] left-[15%] right-0 hidden  border-[1px] border-[#0000001A] lg:block xl:left-[21.5%]"></div>
       </section>
 
       {/*SECTION:: SECTION::1)Top Section rectangle with image */}
@@ -87,7 +88,7 @@ export default function WelcomeScreen({}: Props) {
         </div>
       </section>
 
-      {/*TODO:: SECTION:: 2)Hero Section */}
+      {/*COMPLETED:: SECTION:: 2)Hero Section */}
       {/* ml-339px => 23% mr-165px  /1440 width=> 936/1440=> 65%
       in mobile 168/360 mx-auto 46.66px  gap-55px => */}
       <section className="mt-7 flex flex-col gap-10 sm:mt-10 md:gap-12 lg:ml-[23%] lg:mt-32 lg:w-[70%] lg:flex-row lg:gap-14 2xl:gap-[4%] ">
@@ -170,10 +171,10 @@ export default function WelcomeScreen({}: Props) {
         </section>
       </section>
 
-      {/*TODO:: SECTION:: 3)Footer Section */}
-      <footer className="mt-[122px] flex justify-between pb-7 container-custom md:pb-8 lg:mt-[202px] ">
+      {/*SECTION:: SECTION:: 3)Footer Section */}
+      <footer className="mx-auto mt-[122px] flex justify-between px-6 pb-7 md:pb-8 lg:mt-[202px] lg:px-4 xl:px-20 ">
         {/*COMPLETED:: 3.1)Left 3 link  */}
-        <div className="flex gap-2 sm:gap-3 lg:gap-5">
+        <div className="relative z-20 flex gap-2 font-sansSerifBookFLF sm:gap-3 lg:gap-5">
           {[
             { title: 'Terms', link: '/#' },
             { title: 'Privacy', link: '/#' },
