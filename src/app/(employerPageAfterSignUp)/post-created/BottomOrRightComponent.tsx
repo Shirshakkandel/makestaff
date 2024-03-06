@@ -15,7 +15,7 @@ import './BottomOrRightComponent.css';
 import { useToast } from '@/components/ui/use-toast';
 
 //SECTION::share data
-const shareData = [
+export const shareData = [
   {
     title: 'LinkDin',
     image: Linkedin,
@@ -40,6 +40,7 @@ export default function BottomOrRightComponent({}: Props) {
   //Function Part
   const { toast } = useToast();
   const togglePublicLink = () => setIsPublic(prev => !prev);
+
   const copyLink = () => {
     navigator.clipboard.writeText(link);
     toast({

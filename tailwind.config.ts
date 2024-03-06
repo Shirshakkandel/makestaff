@@ -19,6 +19,9 @@ const config = {
     },
     extend: {
       fontSize: {
+        // xxxxs: '4px',
+        // xxxs: '8.26px',
+        verySmall: '8.26px',
         xxs: '10px',
       },
       screens: {
@@ -92,6 +95,7 @@ const config = {
       },
     },
   },
+
   plugins: [
     require('tailwindcss-animate'),
     require('tailwindcss-debug-screens'),

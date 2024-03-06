@@ -13,7 +13,7 @@ export default function PageLayout({ topOrLeftComponents, bottomOrRightComponent
         style={{
           background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
         }}
-        className=" relative h-full w-full  lg:w-[45%]"
+        className=" relative  w-full  lg:w-[45%]"
       >
         {topOrLeftComponents}
       </div>
