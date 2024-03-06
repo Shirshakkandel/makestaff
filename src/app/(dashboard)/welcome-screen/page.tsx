@@ -179,7 +179,7 @@ export default function WelcomeScreen({}: Props) {
             { title: 'Privacy', link: '/#' },
             { title: 'Cookies', link: '/#' },
           ].map(({ link, title }) => (
-            <Link href={link} className="text-xs text-[#171717] md:text-base">
+            <Link key={title} href={link} className="text-xs text-[#171717] md:text-base">
               {title}
             </Link>
           ))}
