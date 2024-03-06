@@ -66,7 +66,7 @@ export default function NavbarMobileMenu({}: Props) {
                   </div>
                 </div>
                 <div className="mt-6 flex flex-col items-center gap-6">
-                  <Link  
+                  <Link
                     href={'/employee-login'}
                     className={`w-full max-w-[500px] text-center font-workSans text-base font-[500] leading-[27px] underline-offset-4 hover:underline`}
                   >

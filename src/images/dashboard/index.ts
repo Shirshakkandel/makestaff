@@ -8,5 +8,6 @@ import Setting from './Setting.svg';
 import TeamUser from './TeamUser.png';
 import User from './User.svg';
 import W from './W.png';
+import Menu from './Nav.svg';
 
-export { Bar, Department, Home, Notification, Plus, Report, Setting, TeamUser, User, W };
+export { Bar, Department, Home, Notification, Plus, Report, Setting, TeamUser, User, W, Menu };

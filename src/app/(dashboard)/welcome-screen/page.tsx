@@ -37,11 +37,11 @@ export default function WelcomeScreen({}: Props) {
       // style={{
       //   background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
       // }}
-      className="body-gradient relative h-full min-h-[100vh]  w-full pt-12 lg:pt-14"
+      className="relative h-full min-h-[100vh] w-full  pt-12 body-gradient lg:pt-14"
     >
       {/* SECTION:: Absolute Things */}
       <section>
-        <div className="absolute left-[25%] top-0 hidden aspect-[1072/570] w-[75%]  lg:block"> 
+        <div className="absolute left-[25%] top-0 hidden aspect-[1072/570] w-[75%]  lg:block">
           <Image alt="Background" src={WelcomeScreenBackground.src} fill className="" />
         </div>
         <div className="absolute bottom-0  left-[15%] top-0 hidden border-[1px] border-[#0000001A] lg:block xl:left-[20.5%]"></div>

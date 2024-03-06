@@ -23,6 +23,7 @@ interface NavProps {
 
 export function Nav({ links, isCollapsed }: NavProps) {
   const pathName = usePathname();
+  
   return (
     <TooltipProvider>
       <div
