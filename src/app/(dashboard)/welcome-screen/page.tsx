@@ -34,18 +34,18 @@ export default function WelcomeScreen({}: Props) {
   //SECTION::UI PART
   return (
     <main
-      style={{
-        background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
-      }}
-      className="relative h-full min-h-[100vh] w-full pt-12 lg:pt-14 "
+      // style={{
+      //   background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
+      // }}
+      className="body-gradient relative h-full min-h-[100vh]  w-full pt-12 lg:pt-14"
     >
       {/* SECTION:: Absolute Things */}
       <section>
-        <div className="absolute left-[25%] top-0 hidden aspect-[1072/570] w-[75%]  lg:block">
+        <div className="absolute left-[25%] top-0 hidden aspect-[1072/570] w-[75%]  lg:block"> 
           <Image alt="Background" src={WelcomeScreenBackground.src} fill className="" />
         </div>
-        <div className="absolute bottom-0  left-[15%] top-0 hidden border-[1px] border-[#0000001A] lg:block xl:left-[21.5%]"></div>
-        <div className="absolute bottom-[10%] left-[15%] right-0 hidden  border-[1px] border-[#0000001A] lg:block xl:left-[21.5%]"></div>
+        <div className="absolute bottom-0  left-[15%] top-0 hidden border-[1px] border-[#0000001A] lg:block xl:left-[20.5%]"></div>
+        <div className="absolute bottom-[10%] left-[15%] right-0 hidden  border-[1px] border-[#0000001A] lg:block xl:left-[20.5%]"></div>
       </section>
 
       {/*SECTION:: SECTION::1)Top Section rectangle with image */}
@@ -174,13 +174,17 @@ export default function WelcomeScreen({}: Props) {
       {/*SECTION:: SECTION:: 3)Footer Section */}
       <footer className="mx-auto mt-[122px] flex justify-between px-6 pb-7 md:pb-8 lg:mt-[202px] lg:px-4 xl:px-20 ">
         {/*COMPLETED:: 3.1)Left 3 link  */}
-        <div className="relative z-20 flex gap-2 font-sansSerifBookFLF sm:gap-3 lg:gap-5">
+        <div className="relative z-20 flex gap-2   sm:gap-3 lg:gap-5">
           {[
             { title: 'Terms', link: '/#' },
             { title: 'Privacy', link: '/#' },
             { title: 'Cookies', link: '/#' },
           ].map(({ link, title }) => (
-            <Link key={title} href={link} className="text-xs text-[#171717] md:text-base">
+            <Link
+              key={title}
+              href={link}
+              className="font-sansSerifBookFLF text-xs text-[#171717] md:text-base"
+            >
               {title}
             </Link>
           ))}

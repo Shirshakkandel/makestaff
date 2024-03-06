@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      // gradientColors: {
+      //   'body-gradient':
+      //     'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
+      // },
       fontSize: {
         // xxxxs: '4px',
         // xxxs: '8.26px',
@@ -130,6 +134,15 @@ const config = {
         },
         '.mb-section': {
           '@apply mb-10 md:mb-16': {},
+        },
+        '.body-gradient': {
+          background: 'linear-gradient(239.18deg, #fce8db 5.68%, #d3f5ff 59.3%, #fef2fc 101.98%)',
+        },
+        '.dashboard-sidebar-gradient': {
+          background: 'linear-gradient(180deg, rgba(234, 246, 248, 0.25) 0%, #F6F5F3 100%)',
+        },
+        '.button-gradient': {
+          background: 'linear-gradient(151.24deg, #FBBBCC 13.33%, #B8E9FD 85.09%)',
         },
 
         '.mt-element': {

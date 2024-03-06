@@ -74,5 +74,10 @@
   body {
     @apply bg-background text-foreground;
   }
-  
+}
+
+@layer components {
+  /* .body-gradient {
+    background: linear-gradient(239.18deg, #fce8db 5.68%, #d3f5ff 59.3%, #fef2fc 101.98%);
+  } */
 }
