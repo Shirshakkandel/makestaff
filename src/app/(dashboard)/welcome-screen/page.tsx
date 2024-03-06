@@ -185,7 +185,7 @@ export default function WelcomeScreen({}: Props) {
           ))}
         </div>
 
-        {/*TODO:: 3.2)Right Section(Links+Pricing) */}
+        {/*COMPLETED:: 3.2)Right Section(Links+Pricing) */}
         <div className="flex gap-9 ">
           {/* 3 Social Links */}
           <div className="flex gap-2.5 md:gap-4">
