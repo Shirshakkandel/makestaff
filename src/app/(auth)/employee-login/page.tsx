@@ -98,6 +98,7 @@ export default function EmployeeLogin({}: Props) {
                       <div className="absolute left-3.5 z-10 h-7 w-7 rounded-full bg-black flex-center">
                         <img src={Email.src} alt="" />
                       </div>
+                      
                       <input
                         {...field}
                         className="absolute inset-0 z-0 h-full w-full rounded-[6px] border-[1px] border-[#EDEDED] pl-14 text-base placeholder-[10px]"

@@ -25,7 +25,7 @@ const NavMobile = () => {
           }}
           alt="Menu"
           src={Menu.src}
-          className="mt-3 aspect-square w-7  "
+          className="mt-3 aspect-square w-7 cursor-pointer "
           width={48}
           height={48}
         />
@@ -34,7 +34,7 @@ const NavMobile = () => {
       {/* 98/360=>  */}
       <AnimatePresence>
         {isOpen && (
-          <div ref={ref} className="absolute top-0 z-10 w-24 body-gradient">
+          <div ref={ref} className="absolute top-0 z-50 w-24 body-gradient">
             <NavSidebar />
           </div>
         )}

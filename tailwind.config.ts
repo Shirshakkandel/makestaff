@@ -144,6 +144,9 @@ const config = {
         '.button-gradient': {
           background: 'linear-gradient(151.24deg, #FBBBCC 13.33%, #B8E9FD 85.09%)',
         },
+        '.input-dropShadow': {
+          'box-shadow': '0px 1px 80px 0px #0000000F',
+        },
 
         '.mt-element': {
           '@apply mt-3 md:mt-4': {},

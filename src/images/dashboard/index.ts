@@ -9,5 +9,19 @@ import TeamUser from './TeamUser.png';
 import User from './User.svg';
 import W from './W.png';
 import Menu from './Nav.svg';
+import SearchIcon from './SearchIcon.svg';
 
-export { Bar, Department, Home, Notification, Plus, Report, Setting, TeamUser, User, W, Menu };
+export {
+  Bar,
+  Department,
+  Home,
+  Notification,
+  Plus,
+  Report,
+  Setting,
+  TeamUser,
+  User,
+  W,
+  Menu,
+  SearchIcon,
+};

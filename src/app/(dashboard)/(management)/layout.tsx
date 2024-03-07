@@ -10,7 +10,7 @@ type Props = {
 
 export default function Dashboard({ children }: Props) {
   return (
-    <main className="flex flex-col lg:flex-row   ">
+    <main className="flex flex-col bg-[#ECEEF1] lg:flex-row  ">
       {/* 1)Top or Left Section */}
       <div className="w-36 flex-col  items-center dashboard-sidebar-gradient non-mobile ">
         <NavSidebar />
