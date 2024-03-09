@@ -17,6 +17,10 @@ import Candidate3 from './candidate3.png';
 import BusinessOverview from './Business Overview.png';
 import FinancialForecast from './FinancialForecast.png';
 import ProjectProposal from './ProjectProposal.png';
+import Owner from './Owner.png';
+import Admin from './Admin.png';
+import Maintainer from './Maintainer.png';
+import Check from './Check.png';
 
 export {
   BusinessOverview,
@@ -38,4 +42,8 @@ export {
   Candidate1,
   Candidate2,
   Candidate3,
+  Owner,
+  Admin,
+  Maintainer,
+  Check,
 };

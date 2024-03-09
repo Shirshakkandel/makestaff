@@ -100,7 +100,7 @@ export default function TeamManagement({}: Props) {
         })}
       </section>
 
-      {/*TODO::2)Table with filter */}
+      {/*COMPLETED::2)Table with filter */}
       <TeamManagementTable />
     </div>
   );

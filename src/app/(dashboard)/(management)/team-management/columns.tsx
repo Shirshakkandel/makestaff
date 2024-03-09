@@ -17,6 +17,17 @@ import { Plus } from '@/images/dashboard';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { useCallback } from 'react';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Email } from '@/images/auth';
+import { EmailSvg } from '@/images/employerPage/PostCreationSteps';
+import AssignDepartment from './_components/AssignDepartment';
 
 type teamManagement = {
   id: string;
@@ -29,6 +40,7 @@ type teamManagement = {
 
 //SECTION::columns
 export const columns: ColumnDef<teamManagement>[] = [
+  //1)Roles
   {
     accessorKey: 'roles',
     header: ({ column, header, table }) => <p className="w-[230px]">Roles</p>,
@@ -47,39 +59,20 @@ export const columns: ColumnDef<teamManagement>[] = [
       );
     },
   },
+  //2)Date
   {
     accessorKey: 'date',
     header: 'Date',
   },
+  //3)Assign Department
   {
     accessorKey: 'assignDepartment',
     header: 'Assign Department',
     cell: ({ row }) => {
-      const assignDepartment = row.getValue('assignDepartment') as string[];
-
-      return (
-        <div className="flex justify-start ">
-          {assignDepartment.map((department, index) => {
-            const firstDepartment = index === 0;
-            return (
-              <p className={cn('text-[14px]', !firstDepartment && 'ml-6 md:ml-7 lg:ml-9')}>
-                {department}
-              </p>
-            );
-          })}
-          {/* <Image
-            src={Plus.src}
-            alt=""
-            width={18}
-            height={18}
-            className="text-tableText ml-4 aspect-square w-[9px] md:ml-5 lg:ml-6 "
-          /> */}
-          {/* <img src={Plus.src} alt="table" className="text-tableText" /> */}
-          <PlusIcon className="ml-4 w-3  cursor-pointer text-tableText md:ml-5 lg:ml-6" />
-        </div>
-      );
+      return <AssignDepartment row={row} />;
     },
   },
+  //4)Job Post
   {
     accessorKey: 'jobPost',
     header: 'Job Post',
@@ -91,8 +84,7 @@ export const columns: ColumnDef<teamManagement>[] = [
       );
     },
   },
-
-  //TODO:: onEdit and onDelete function
+  //5)Action
   {
     accessorKey: 'actions',
     header: 'Action',

@@ -29,7 +29,7 @@ import { Switch } from '@/components/ui/switch';
 
 //SECTION::columns
 export const columns: ColumnDef<manageTobListingType>[] = [
-  //TODO::1)Roles
+  //COMPLETEF::1)Roles
   {
     accessorKey: 'roles',
     header: ({ column, header, table }) => <p className="min-w-[240px]  ">Roles</p>,
@@ -66,7 +66,7 @@ export const columns: ColumnDef<manageTobListingType>[] = [
         <div className="flex  shrink-0 items-start gap-5 md:gap-6 lg:gap-7">
           <div className="aspect-square w-10 shrink-0 bg-white flex-center">
             {/* <p className="text-[18px] font-[500] text-black">{row.original.name.charAt(0)}</p> */}
-            <Image src={image.src} width={40} height={40} alt={jobTitle}  className='w-1/2'/>
+            <Image src={image.src} width={40} height={40} alt={jobTitle} className="w-1/2" />
           </div>
 
           <div className="flex flex-col">

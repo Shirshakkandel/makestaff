@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import React, { useState } from 'react';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { DataTable } from './data-table';
-import { columns } from './columns';
+import { columns } from '../columns';
 import UpgradeToPro from '@/components/dashboard/UpgradeToPro';
 import { tableDataTeamManagement } from './TeamManagementData';
 
