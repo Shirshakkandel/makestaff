@@ -39,11 +39,14 @@ const config = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+
         text: '#171717',
         heading: '#040404',
         textDim: '#00000066',
         background: 'hsl(var(--background))',
         background2: '#f7f7f9',
+        tableText: '#989898',
+        dashboardBackground: '#ECEEF1',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -143,6 +146,12 @@ const config = {
         },
         '.button-gradient': {
           background: 'linear-gradient(151.24deg, #FBBBCC 13.33%, #B8E9FD 85.09%)',
+        },
+        '.vertical-gradient': {
+          background: 'linear-gradient(90deg, #F99FAE 0%, #A5C8FF 62.81%, #A2E5FF 100%)',
+        },
+        '.box-dropShadow': {
+          boxShadow: '0px 1px 100px 0px #00000008',
         },
         '.input-dropShadow': {
           'box-shadow': '0px 1px 80px 0px #0000000F',

@@ -3,73 +3,25 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import React, { useState } from 'react';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-  TableFooter,
-} from '@/components/ui/table';
+import { DataTable } from './data-table';
+import { columns } from './columns';
+import UpgradeToPro from '@/components/dashboard/UpgradeToPro';
+import { tableDataTeamManagement } from './TeamManagementData';
 
 type Props = {};
 
-const invoices = [
-  {
-    invoice: 'INV001',
-    paymentStatus: 'Paid',
-    totalAmount: '$250.00',
-    paymentMethod: 'Credit Card',
-  },
-  {
-    invoice: 'INV002',
-    paymentStatus: 'Pending',
-    totalAmount: '$150.00',
-    paymentMethod: 'PayPal',
-  },
-  {
-    invoice: 'INV003',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$350.00',
-    paymentMethod: 'Bank Transfer',
-  },
-  {
-    invoice: 'INV004',
-    paymentStatus: 'Paid',
-    totalAmount: '$450.00',
-    paymentMethod: 'Credit Card',
-  },
-  {
-    invoice: 'INV005',
-    paymentStatus: 'Paid',
-    totalAmount: '$550.00',
-    paymentMethod: 'PayPal',
-  },
-  {
-    invoice: 'INV006',
-    paymentStatus: 'Pending',
-    totalAmount: '$200.00',
-    paymentMethod: 'Bank Transfer',
-  },
-  {
-    invoice: 'INV007',
-    paymentStatus: 'Unpaid',
-    totalAmount: '$300.00',
-    paymentMethod: 'Credit Card',
-  },
-];
+export const departments = ['All', 'Sales', 'Design', 'Marketing'] as const;
 
 export default function TeamManagementTable({}: Props) {
-  const departments = ['All', 'Sales', 'Design', 'Marketing'] as const;
-  const [assignDepartment, setAssignDepartment] = useState<(typeof departments)[number]>('All');
+  const [assignDepartment, setAssignDepartment] = useState<(typeof departments)[number]>(
+    departments[0],
+  );
 
   return (
     <div>
-      {/*TODO:: 1)Top (Department Section selection) */}
+      {/*SECTION:: 1)Top (Department Section selection) */}
       <ScrollArea>
-        <section className="my-6 flex gap-4 container-left md:mt-7 md:gap-6 lg:mt-14 ">
+        <section className="mt-6 flex gap-4 container-left md:mt-7 md:gap-6 lg:mt-14 ">
           {departments.map((department, index) => {
             const active = assignDepartment === department;
             return (
@@ -91,33 +43,13 @@ export default function TeamManagementTable({}: Props) {
       </ScrollArea>
 
       {/* 2)Table Section */}
-      <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {invoices.map(invoice => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentStatus}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">{invoice.totalAmount}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell colSpan={3}>Total</TableCell>
-            <TableCell className="text-right">$2,500.00</TableCell>
-          </TableRow>
-        </TableFooter>
-      </Table>
+      {/* 1)columns.tsx, data-table.tsx and page.tsx. */}
+      <div className="relative inset-0 mt-9 w-full md:mt-10 lg:mt-14">
+        <div className="container-left lg:container-right">
+          <DataTable columns={columns} data={tableDataTeamManagement} />
+          <UpgradeToPro />
+        </div>
+      </div>
     </div>
   );
 }

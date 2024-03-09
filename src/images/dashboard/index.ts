@@ -10,8 +10,18 @@ import User from './User.svg';
 import W from './W.png';
 import Menu from './Nav.svg';
 import SearchIcon from './SearchIcon.svg';
+import Job from './Job.png';
+import Candidate1 from './candidate1.png';
+import Candidate2 from './candidate2.png';
+import Candidate3 from './candidate3.png';
+import BusinessOverview from './Business Overview.png';
+import FinancialForecast from './FinancialForecast.png';
+import ProjectProposal from './ProjectProposal.png';
 
 export {
+  BusinessOverview,
+  FinancialForecast,
+  ProjectProposal,
   Bar,
   Department,
   Home,
@@ -24,4 +34,8 @@ export {
   W,
   Menu,
   SearchIcon,
+  Job,
+  Candidate1,
+  Candidate2,
+  Candidate3,
 };

@@ -11,9 +11,9 @@ type Props = {};
 
 export default function TeamManagement({}: Props) {
   return (
-    <div className="h-full  pt-12">
+    <div className="h-full w-full  pt-12">
       {/*SECTION:: 1)Top Section(Team Management+ 3 Card) */}
-      <section className="flex max-w-[2500px] flex-col container-left container-right lg:flex-row lg:items-center lg:justify-between">
+      <section className="flex w-full max-w-[2500px] flex-col container-left container-right lg:flex-row lg:items-center lg:justify-between">
         {/* 1.1)Team Management */}
         <h1 className="text-[22px] font-[400] 2xl:text-[clamp(22px,1vw+0.2rem,44px)] 2xl:leading-[120%] ">
           Team <br />
@@ -45,6 +45,7 @@ export default function TeamManagement({}: Props) {
           const firstCard = index === 0;
           return (
             <div
+              key={title}
               className={cn(
                 'flex min-h-[86px] w-full items-center justify-between gap-5 rounded-[10px] bg-[#F5F5F5] px-6  pt-1 md:w-[219px] 2xl:w-[clamp(219px,5vw+5rem,450px)] ',
                 firstCard && ' cursor-pointer body-gradient',

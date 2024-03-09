@@ -74,6 +74,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  tbody {
+    @apply space-y-10;
+  }
 }
 
 @layer components {
