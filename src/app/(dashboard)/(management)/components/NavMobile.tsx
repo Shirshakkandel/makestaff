@@ -18,7 +18,7 @@ const NavMobile = () => {
 
   return (
     <div>
-      <div className="container-custom">
+      <div className="container-left container-right">
         <Image
           onClick={prev => {
             setIsOpen(prev => !prev);

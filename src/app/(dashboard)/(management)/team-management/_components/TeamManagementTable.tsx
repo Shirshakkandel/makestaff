@@ -21,7 +21,7 @@ export default function TeamManagementTable({}: Props) {
     <div>
       {/*SECTION:: 1)Top (Department Section selection) */}
       <ScrollArea>
-        <section className="mt-6 flex gap-4 container-left md:mt-7 md:gap-6 lg:mt-14 ">
+        <section className="mb-4 mt-6 flex gap-4 container-left md:mt-7 md:gap-6 lg:mt-14 ">
           {departments.map((department, index) => {
             const active = assignDepartment === department;
             return (
@@ -44,7 +44,7 @@ export default function TeamManagementTable({}: Props) {
 
       {/* 2)Table Section */}
       {/* 1)columns.tsx, data-table.tsx and page.tsx. */}
-      <div className="relative inset-0 mt-9 w-full md:mt-10 lg:mt-14">
+      <div className="relative inset-0 mt-5 w-full md:mt-10 lg:mt-10">
         <div className="container-left lg:container-right">
           <DataTable columns={columns} data={tableDataTeamManagement} />
           <UpgradeToPro />

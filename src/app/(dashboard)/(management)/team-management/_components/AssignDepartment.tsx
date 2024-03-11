@@ -53,7 +53,7 @@ export default function AssignDepartment({ row }: Props) {
           <PlusIcon className="ml-4 w-3  cursor-pointer text-tableText md:ml-5 lg:ml-6" />
         </SheetTrigger>
 
-        <SheetContent className="w-[800px] overflow-y-scroll ">
+        <SheetContent className="w-[80%] overflow-y-scroll ">
           <SheetHeader>
             <SheetTitle className="">Assign Roles</SheetTitle>
             <div className="relative h-14 w-full flex-center">

@@ -25,6 +25,7 @@ import Sales from './Sales.png';
 import HumanResources from './HumanResources.png';
 import HelpSupport from './HelpSupport.png';
 import Settings from './Settings.png';
+import PlusLight from './PlusLight.svg';
 
 export {
   Sales,
@@ -54,4 +55,5 @@ export {
   Admin,
   Maintainer,
   Check,
+  PlusLight,
 };
