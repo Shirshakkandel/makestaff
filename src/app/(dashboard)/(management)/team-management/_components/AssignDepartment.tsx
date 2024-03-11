@@ -42,7 +42,7 @@ export default function AssignDepartment({ row }: Props) {
       {assignDepartment.map((department, index) => {
         const firstDepartment = index === 0;
         return (
-          <p className={cn('text-[14px]', !firstDepartment && 'ml-6 md:ml-7 lg:ml-9')}>
+          <p key={index} className={cn('text-[14px]', !firstDepartment && 'ml-6 md:ml-7 lg:ml-9')}>
             {department}
           </p>
         );

@@ -2,32 +2,9 @@
 
 import { ColumnDef, Row } from '@tanstack/react-table';
 
-import { MoreHorizontal, MoreVertical, PlusIcon } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Plus } from '@/images/dashboard';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import { useCallback } from 'react';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
 import { Email } from '@/images/auth';
-import { EmailSvg } from '@/images/employerPage/PostCreationSteps';
 import AssignDepartment from './_components/AssignDepartment';
+import Actions from './_components/Actions';
 
 type teamManagement = {
   id: string;
@@ -89,43 +66,7 @@ export const columns: ColumnDef<teamManagement>[] = [
     accessorKey: 'actions',
     header: 'Action',
     cell: ({ row }) => {
-      const onDelete = useCallback(
-        (teamId: any) => alert(`backend  delete call with delete id  ${row.original.id}`),
-        [],
-      );
-      const onEdit = useCallback(
-        (teamId: any) => alert(`backend update call with update id ${row.original.id}`),
-        [],
-      );
-
-      return (
-        <section className="flex gap-2">
-          <Button className="" variant={'default'} onClick={() => onEdit(row.original)}>
-            Edit
-          </Button>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
-                <MoreVertical className="w-5" />
-              </Button>
-            </DropdownMenuTrigger>
-
-            <DropdownMenuContent align="end">
-              {/* <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuItem onClick={() => navigator.clipboard.writeText(payment.id)}>
-                Copy payment ID
-              </DropdownMenuItem> */}
-              <DropdownMenuItem onClick={() => onEdit(row.original)}>Edit</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => onDelete(row.original)}>Delete</DropdownMenuItem>
-              {/* <DropdownMenuItem>View customer</DropdownMenuItem>
-              <DropdownMenuItem>View payment details</DropdownMenuItem> */}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </section>
-      );
+      return <Actions row={row} />;
     },
   },
 ];
