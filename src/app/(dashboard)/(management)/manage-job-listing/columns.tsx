@@ -89,14 +89,15 @@ export const columns: ColumnDef<manageTobListingType>[] = [
     header: 'Job URL',
     cell: ({ row }) => {
       const url = row.getValue('jobUrl') as string;
-      const { toast } = useToast();
+      // const { toast } = useToast();
       const copyLink = () => {
         navigator.clipboard.writeText(url);
-        toast({
-          title: 'Job link copied to clipboard',
-          description: 'You can paste it in the search bar',
-          variant: 'default',
-        });
+        // toast({
+        //   title: 'Job link copied to clipboard',
+        //   description: 'You can paste it in the search bar',
+        //   variant: 'default',
+        // });
+        alert('Job link copied to clipboard');
       };
 
       return (
