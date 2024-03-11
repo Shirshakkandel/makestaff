@@ -26,6 +26,7 @@ import {
 } from '@/images/dashboard';
 import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
+import Publish from './_components/Publish';
 
 //SECTION::columns
 export const columns: ColumnDef<manageTobListingType>[] = [
@@ -179,13 +180,7 @@ export const columns: ColumnDef<manageTobListingType>[] = [
     accessorKey: 'publish',
     header: 'Publish',
     cell: ({ row }) => {
-      const [published, setPublished] = useState(row.getValue('publish') as boolean);
-      // let published = row.getValue('publish') as boolean;
-      function togglePublish() {
-        setPublished(prev => !prev);
-      }
-      console.log(published);
-      return <Switch checked={published} onCheckedChange={togglePublish} />;
+      return <Publish row={row} />;
     },
   },
   //COMPLETED:: 8)Invite
