@@ -4,18 +4,12 @@ import { ColumnDef } from '@tanstack/react-table';
 import { MoreVertical, PlusIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCallback, useState } from 'react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+
 import { manageTobListingType } from './_data/ManageJobData';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CopySvg, HandEmoji, SalesJob } from '@/images/employerPage/PostCreationSteps';
-import { useToast } from '@/components/ui/use-toast';
+
 import {
   BusinessOverview,
   Candidate1,
@@ -27,6 +21,7 @@ import {
 import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import Publish from './_components/Publish';
+import Invite from './_components/Invite';
 
 //SECTION::columns
 export const columns: ColumnDef<manageTobListingType>[] = [
@@ -188,38 +183,7 @@ export const columns: ColumnDef<manageTobListingType>[] = [
     accessorKey: 'invite',
     header: 'Invite',
     cell: ({ row }) => {
-      const onDelete = useCallback(
-        (jobId: any) => alert(`backend  delete call with delete job id  ${row.original.id}`),
-        [],
-      );
-
-      const onEdit = useCallback(
-        (jobId: any) => alert(`backend update call with update job id ${row.original.id}`),
-        [],
-      );
-
-      return (
-        <section className="flex gap-2">
-          <Button className="" variant={'default'}>
-            Invite
-          </Button>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
-                <MoreVertical className="w-5" />
-              </Button>
-            </DropdownMenuTrigger>
-
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => onEdit(row.original)}>Edit</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => onDelete(row.original)}>Delete</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </section>
-      );
+      return <Invite row={row} />;
     },
   },
 ];

@@ -1,10 +1,11 @@
 import { Row } from '@tanstack/react-table';
 import React, { useState } from 'react';
-import { teamManagementType } from './TeamManagementData';
+
 import { Switch } from '@/components/ui/switch';
+import { manageTobListingType } from '../_data/ManageJobData';
 
 type Props = {
-  row: Row<teamManagementType>;
+  row: Row<manageTobListingType>;
 };
 
 export default function Publish({ row }: Props) {
