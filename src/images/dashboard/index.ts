@@ -21,8 +21,16 @@ import Owner from './Owner.png';
 import Admin from './Admin.png';
 import Maintainer from './Maintainer.png';
 import Check from './Check.png';
+import Sales from './Sales.png';
+import HumanResources from './HumanResources.png';
+import HelpSupport from './HelpSupport.png';
+import Settings from './Settings.png';
 
 export {
+  Sales,
+  HumanResources,
+  HelpSupport,
+  Settings,
   BusinessOverview,
   FinancialForecast,
   ProjectProposal,
