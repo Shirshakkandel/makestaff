@@ -26,8 +26,16 @@ import HumanResources from './HumanResources.png';
 import HelpSupport from './HelpSupport.png';
 import Settings from './Settings.png';
 import PlusLight from './PlusLight.svg';
+import ExperienceYear from './experienceyear.svg';
+import Phone from './Phone.svg';
+import PlusWhite from './PlusWhite.svg';
+import BoyWithBackground from './boyWithBackground.png';
 
 export {
+  BoyWithBackground,
+  ExperienceYear,
+  Phone,
+  PlusWhite,
   Sales,
   HumanResources,
   HelpSupport,

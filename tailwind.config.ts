@@ -115,10 +115,10 @@ const config = {
           '@apply w-full max-w-[614px] lg:max-w-none': {},
         },
         '.container-left': {
-          '@apply pl-3 lg:pl-10 xl:pl-[42px]': {},
+          '@apply pl-4 lg:pl-10 xl:pl-[42px]': {},
         },
         '.container-right': {
-          '@apply pr-3 lg:pr-10 xl:pr-[42px]': {},
+          '@apply pr-4 lg:pr-10 xl:pr-[42px]': {},
         },
         '.container-right-dashboard': {
           '@apply pr-3 lg:pr-10 lg:pr-[42px] xl:pr-[5%]': {},
@@ -143,7 +143,7 @@ const config = {
           '@apply py-16 md:py-24': {},
         },
         '.mb-section': {
-          '@apply mb-10 md:mb-16': {},
+          '@apply mb-10 md:mb-11 lg:mb-12': {},
         },
         '.body-gradient': {
           background: 'linear-gradient(239.18deg, #fce8db 5.68%, #d3f5ff 59.3%, #fef2fc 101.98%)',
@@ -156,6 +156,9 @@ const config = {
         },
         '.vertical-gradient': {
           background: 'linear-gradient(90deg, #F99FAE 0%, #A5C8FF 62.81%, #A2E5FF 100%)',
+        },
+        '.image-bottom-gradient': {
+          background: 'linear-gradient(180deg, rgba(226, 241, 243, 0) 31.73%, #D6F5FE 100%)',
         },
         '.box-dropShadow': {
           boxShadow: '0px 1px 100px 0px #00000008',
