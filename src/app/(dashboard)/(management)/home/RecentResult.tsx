@@ -1,14 +1,15 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import { ScrollBar } from '@/components/ui/scroll-area';
-import { Plus } from '@/images/dashboard';
+import { ScrollBar, ScrollArea } from '@/components/ui/scroll-area';
+import { Department, Plus } from '@/images/dashboard';
 
 import { cn } from '@/lib/utils';
-import { ScrollArea } from '@radix-ui/react-scroll-area';
+
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { results } from '../_data/Results';
 import UpgradeToPro from '@/components/dashboard/UpgradeToPro';
+import { HandEmoji } from '@/images/employerPage/PostCreationSteps';
 
 export const departments = ['All', 'Sales', 'Design', 'Marketing'];
 
@@ -17,7 +18,7 @@ const RecentResult = () => {
     departments[0],
   );
   return (
-    <section className=" ">
+    <section className="relative">
       {/* COMMENT::1)ScrollBar  */}
       <div>
         <ScrollArea>
@@ -47,7 +48,7 @@ const RecentResult = () => {
       </div>
 
       {/* COMMENT::2)Recent Result. */}
-      <section className="mt-7 grid w-[98%] grid-cols-2 gap-x-4 gap-y-6 container-left container-right md:mt-8 md:grid-cols-3 lg:mt-10 lg:grid-cols-6 2xl:gap-x-[clamp(1rem,1.4vw+0.1rem,2rem)]">
+      <section className="mt-7 grid  grid-cols-2 gap-x-4 gap-y-6 container-left container-right md:mt-8 md:grid-cols-3 lg:mt-10 lg:grid-cols-6 2xl:gap-x-[clamp(1rem,1.4vw+0.1rem,2rem)]">
         {results.map(({ firstName, lastName, date, jobTitle, rating, image, active }, index) => {
           return (
             <div key={index} className="space-y-4 rounded-[10px] bg-white pb-4 pl-2.5 pt-5">
@@ -85,7 +86,27 @@ const RecentResult = () => {
       </section>
       <UpgradeToPro />
       {/* TODO::Bottom Aryaa Section */}
-      <div className="ml-auto w-[98%] container-left container-right"></div>
+      <section className="ml-auto mt-9 flex justify-end gap-2.5 container-left container-right">
+        <div className="flex flex-col ">
+          <p className="inline-flex items-center gap-1 text-[18px] font-[600] leading-[30px] 2xl:text-[clamp(18px,1.5vw+0.1rem,40px)]">
+            Hi Aryaa{' '}
+            <span className="inline-flex items-center">
+              <Image
+                alt="Hand Emoji"
+                src={HandEmoji.src}
+                width={24}
+                height={24}
+                className="aspect-square w-[18px]"
+              />
+            </span>
+          </p>
+          <p className="text-[14px] font-[400] leading-[20px]">How can we Help you?</p>
+        </div>
+
+        <div className="aspect-square w-12 rounded-full bg-[#FBFBFB] flex-center">
+          <Image alt="Department" width={96} height={96} src={Department.src} className="w-1/2" />
+        </div>
+      </section>
     </section>
   );
 };
