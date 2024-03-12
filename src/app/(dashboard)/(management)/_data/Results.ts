@@ -2,7 +2,7 @@ import { Amelia, Emma, NishaPatel, Shivani } from '@/images/dashboard/candidate'
 import { StaticImageData } from 'next/image';
 
 // Define an interface for the candidate data
-interface Candidate {
+export interface Candidate {
   firstName: string;
   lastName: string;
   image?: StaticImageData;

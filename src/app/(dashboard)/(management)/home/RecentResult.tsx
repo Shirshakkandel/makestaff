@@ -17,6 +17,7 @@ const RecentResult = () => {
   const [assignDepartment, setAssignDepartment] = useState<(typeof departments)[number]>(
     departments[0],
   );
+
   return (
     <section className="relative">
       {/* COMMENT::1)ScrollBar  */}
@@ -48,7 +49,7 @@ const RecentResult = () => {
       </div>
 
       {/* COMMENT::2)Recent Result. */}
-      <section className="mt-7 grid  grid-cols-2 gap-x-4 gap-y-6 container-left container-right md:mt-8 md:grid-cols-3 lg:mt-10 lg:grid-cols-6 2xl:gap-x-[clamp(1rem,1.4vw+0.1rem,2rem)]">
+      <section className="mt-7 grid grid-cols-2  gap-x-4 gap-y-6 container-left container-right md:mt-8 md:grid-cols-3 lg:mt-10 lg:grid-cols-6 xl:w-[98%] 2xl:gap-x-[clamp(1rem,1.4vw+0.1rem,2rem)]">
         {results.map(({ firstName, lastName, date, jobTitle, rating, image, active }, index) => {
           return (
             <div key={index} className="space-y-4 rounded-[10px] bg-white pb-4 pl-2.5 pt-5">
@@ -72,6 +73,7 @@ const RecentResult = () => {
               <p className="!mt-1 text-xs leading-[20px] text-black 2xl:text-[clamp(12px,1vw+0.3rem,24px)] 2xl:leading-[120%]">
                 {jobTitle}
               </p>
+
               <div
                 className={cn(
                   'w-[36.5%] rounded-[3px] bg-[#F6F6F6] py-2 flex-center 2xl:py-[clamp(0.5rem,1vw+0.1rem,1rem)]',
@@ -85,8 +87,9 @@ const RecentResult = () => {
         })}
       </section>
       <UpgradeToPro />
-      {/* TODO::Bottom Aryaa Section */}
-      <section className="ml-auto mt-9 flex justify-end gap-2.5 container-left container-right">
+
+      {/* COMMENT::Bottom Aryaa Section */}
+      <section className=" mt-9 flex justify-end gap-2.5 container-left container-right xl:w-[98%]">
         <div className="flex flex-col ">
           <p className="inline-flex items-center gap-1 text-[18px] font-[600] leading-[30px] 2xl:text-[clamp(18px,1.5vw+0.1rem,40px)]">
             Hi Aryaa{' '}

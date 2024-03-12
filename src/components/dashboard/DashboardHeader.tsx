@@ -9,7 +9,7 @@ type Props = {
 
 export default function DashboardHeader({ firstLine, secondLine }: Props) {
   return (
-    <section className=" flex w-full max-w-[2500px] flex-col pt-12 container-left container-right lg:flex-row lg:items-center lg:justify-between">
+    <section className=" flex w-full  flex-col pt-12 container-left container-right lg:flex-row lg:items-center lg:justify-between">
       {/* 1.1)Team Management */}
       <h1 className="text-[22px] font-[400] 2xl:text-[clamp(22px,1vw+0.2rem,44px)] 2xl:leading-[120%] ">
         {firstLine} <br />

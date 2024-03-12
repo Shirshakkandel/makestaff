@@ -120,6 +120,13 @@ const config = {
         '.container-right': {
           '@apply pr-3 lg:pr-10 xl:pr-[42px]': {},
         },
+        '.container-right-dashboard': {
+          '@apply pr-3 lg:pr-10 lg:pr-[42px] xl:pr-[5%]': {},
+        },
+        '.dashboard-width': {
+          '@apply xl:w-[98%]': {},
+        },
+
         '.container-customNoMaxWidth': {
           '@apply px-6 lg:px-20 xl:px-[85px] mx-auto': {},
         },
@@ -130,7 +137,7 @@ const config = {
           '@apply max-w-[1000px] mx-auto': {},
         },
         '.mt-section': {
-          '@apply mt-16 md:mt-24': {},
+          '@apply mt-10 md:mt-11 lg:mt-12': {},
         },
         '.py-section': {
           '@apply py-16 md:py-24': {},
