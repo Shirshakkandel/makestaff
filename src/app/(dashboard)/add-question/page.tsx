@@ -5,7 +5,7 @@ import BottomOrRightComponent from './BottomOrRightComponent';
 
 type Props = {};
 
-export default function OverallResult({}: Props) {
+export default function AddQuestion({}: Props) {
   return (
     <PageLayout
       topOrLeftComponents={<TopOrLeftComponent />}
@@ -13,4 +13,3 @@ export default function OverallResult({}: Props) {
     />
   );
 }
-    

@@ -1,0 +1,63 @@
+import { Leyna } from '@/app/(public)/_images/LandingPage';
+import { Flower, TopBackground } from '@/images/auth';
+import Image from 'next/image';
+import React from 'react';
+
+type Props = {};
+
+export default function TopOrLeftComponent({}: Props) {
+  return (
+    <section
+      style={{
+        background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
+      }}
+      className="relative w-full  "
+    >
+      {/* Background */}
+      <Image
+        src={TopBackground.src}
+        alt=""
+        width={1282}
+        height={726}
+        className="absolute aspect-[641/440] w-full"
+      />
+
+      {/* Image 211/360=> 58.6%, lg: 301/641 =>47% */}
+      <div className="relative ml-[24px] mt-[70px] aspect-[211/307] w-[211px] min-w-[58%] lg:ml-[77px] lg:aspect-[301/438] lg:w-[301px] lg:min-w-[47%] ">
+        <Image alt="Leyna" src={Leyna.src} fill priority />
+        <div
+          style={{
+            background: 'linear-gradient(180deg, rgba(226, 241, 243, 0) 31.73%, #D6F5FE 100%)',
+          }}
+          className="absolute bottom-0 aspect-[301/206] w-full"
+        ></div>
+      </div>
+
+      {/* Content */}
+      <div className="ml-[24px] lg:ml-[77px]">
+        <p className="mt-[34px] font-sansSerifBookFLF text-base font-[550] leading-[] text-[#171717] md:text-[30px]  lg:mt-[50px]">
+          Hey
+        </p>
+        {/* Cap height Cap height */}
+        <p className="mt-5 text-[23px]  font-[600]  leading-[70%]  md:text-[56px] lg:mt-7 ">
+          I’m Leyna
+        </p>
+        <p className="mt-5 inline-flex flex-col font-sansSerifBookFLF  text-[16px]  font-[550] leading-[18px] text-black md:mt-7 md:text-[28px] md:leading-[30px]">
+          Your personal <span className="font-sansSerifBookFLF">interviewer</span>
+        </p>
+        <p className="mt-7 max-w-[226px] text-xs leading-[18px] md:mt-[70px] md:max-w-[301px] md:text-base">
+          Who will conduct the interview and shortlist the best fit for your company
+        </p>
+      </div>
+
+      {/* Right Flower */}
+      <Image
+        alt="flower"
+        src={Flower.src}
+        width={188}
+        height={200}
+        className="ml-auto mr-3 aspect-[82/74] w-[20%] min-w-[82px]"
+      />
+    </section>
+  );
+}

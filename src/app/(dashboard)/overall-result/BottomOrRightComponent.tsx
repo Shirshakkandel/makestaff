@@ -26,15 +26,13 @@ export default function BottomOrRightComponent({}: Props) {
           {/* 1.1)Top or left section */}
           <div className="">
             <p className="text-base  xl:text-xl ">Rahul Jatt’s</p>
-            <p className="text-[19px] font-[500]   xl:text-[32px] ">Overall Result</p>
+            <p className="text-[19px] font-[500]  xl:text-[32px] ">Overall Result</p>
           </div>
 
           <div className="mt-7 flex gap-4">
             <div className="border-r-[1px] border-[#0000004D] pr-4">
               <p className=" text-base font-[500] xl:text-xl  ">Software Developer</p>
-              <p className="text-right text-[14px] font-[400] text-[#706B6B] lg:text-base">
-                Job Title
-              </p>
+              <p className="text-14 text-right font-[400] text-[#706B6B] lg:text-base">Job Title</p>
             </div>
 
             <div>

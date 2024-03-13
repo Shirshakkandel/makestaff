@@ -27,6 +27,8 @@ const config = {
         // xxxs: '8.26px',
         verySmall: '8.26px',
         xxs: '10px',
+        //custom text-size of 14px with line height 22px
+        14: ['14px', '22px'],
       },
       screens: {
         '3xl': '1440px',
@@ -127,6 +129,10 @@ const config = {
         '.container-right-dashboard': {
           '@apply pr-3 lg:pr-10 lg:pr-[42px] xl:pr-[5%]': {},
         },
+        '.container-section-right': {
+          '@apply h-full bg-[#f7f7f9] pt-4 container-left container-right md:pt-6 lg:pt-12': {},
+        },
+
         '.dashboard-width': {
           '@apply xl:w-[98%]': {},
         },
@@ -141,7 +147,7 @@ const config = {
           '@apply max-w-[1000px] mx-auto': {},
         },
         '.mt-section': {
-          '@apply mt-10 md:mt-11 lg:mt-12': {},
+          '@apply mt-10 md:mt-11 lg:mt-12 2xl:mt-[clamp(3rem,2vw+0.4rem,6rem)]': {},
         },
         '.py-section': {
           '@apply py-16 md:py-24': {},
@@ -174,6 +180,10 @@ const config = {
         '.mt-element': {
           '@apply mt-3 md:mt-4': {},
         },
+        '.mt-element-big': {
+          '@apply mt-5 md:mt-7 lg:mt-8': {},
+        },
+
         '.only-mobile': {
           '@apply lg:hidden': {},
         },
@@ -191,6 +201,10 @@ const config = {
         },
         '.h1': {
           '@apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl': {},
+        },
+        '.subHeading': {
+          '@apply text-base font-medium  lg:text-xl 2xl:text-[clamp(20px,1vw+0.4rem,40px)] 2xl:leading-[110%]':
+            {},
         },
       });
     },
