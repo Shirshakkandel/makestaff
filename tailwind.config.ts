@@ -117,6 +117,10 @@ const config = {
         '.container-left': {
           '@apply pl-4 lg:pl-10 xl:pl-[42px]': {},
         },
+        '.top-or-left-container': {
+          '@apply relative pl-6 pt-12 lg:pl-14 lg:pt-8 3xl:pl-20 4xl:pl-[clamp(5rem,2vw+1rem,10rem)]':
+            {},
+        },
         '.container-right': {
           '@apply pr-4 lg:pr-10 xl:pr-[42px]': {},
         },

@@ -8,7 +8,7 @@ type Props = {
 export default function PageLayout({ topOrLeftComponents, bottomOrRightComponents }: Props) {
   return (
     //Total 1440px=> left(641px)45% right 799px 55%
-    <main className=" flex flex-col  lg:flex-row  lg:justify-start">
+    <main className=" flex min-h-[100vh] flex-col  lg:flex-row  lg:justify-start">
       <div
         // style={{
         //   background: 'linear-gradient(239.18deg, #FCE8DB 5.68%, #D3F5FF 59.3%, #FEF2FC 101.98%)',
