@@ -12,7 +12,7 @@ export default function BottomOrRightComponent({}: Props) {
       {/* 1)Close */}
       <ClosedComponent />
 
-      {/*COMMENT:: 2)Image with Subheading */}
+      {/*COMMENT:: 2)Image with Subheading */}  
       {/* 4:37-4:47 */}
       <section className="mt-section">
         <div className="flex aspect-square w-12 items-end justify-center rounded-[6px] body-gradient ">

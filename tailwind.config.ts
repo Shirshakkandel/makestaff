@@ -149,6 +149,9 @@ const config = {
         '.mt-section': {
           '@apply mt-10 md:mt-11 lg:mt-12 2xl:mt-[clamp(3rem,2vw+0.4rem,6rem)]': {},
         },
+        // '.mt-dashboard':{
+
+        // }
         '.py-section': {
           '@apply py-16 md:py-24': {},
         },
@@ -157,6 +160,9 @@ const config = {
         },
         '.body-gradient': {
           background: 'linear-gradient(239.18deg, #fce8db 5.68%, #d3f5ff 59.3%, #fef2fc 101.98%)',
+        },
+        '.dashboard-gradient': {
+          background: 'linear-gradient(239.18deg, #F7F3E8 5.68%, #FBF2EE 50.75%, #E0F6FB 101.98%)',
         },
         '.dashboard-sidebar-gradient': {
           background: 'linear-gradient(180deg, rgba(234, 246, 248, 0.25) 0%, #F6F5F3 100%)',
