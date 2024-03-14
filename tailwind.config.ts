@@ -186,8 +186,12 @@ const config = {
         '.mt-element': {
           '@apply mt-3 md:mt-4': {},
         },
+
         '.mt-element-big': {
           '@apply mt-5 md:mt-7 lg:mt-8': {},
+        },
+        '.mb-element': {
+          '@apply mb-5 md:mb-7 lg:mb-8': {},
         },
 
         '.only-mobile': {
