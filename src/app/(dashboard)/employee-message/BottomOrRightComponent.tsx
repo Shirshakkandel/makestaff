@@ -1,18 +1,32 @@
+'use client';
 import { Leyna } from '@/app/(public)/_images/LandingPage';
 import ClosedComponent from '@/components/PostCreationStep/ClosedComponent';
 import { BoyWithBackground, Plus } from '@/images/dashboard';
 import { EmailSign, ImageUpload, SendArrow, Smile } from '@/images/dashboard/extraPages';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
+import useEmployeeLogic from './useEmployeeLogic';
+import InterviewCancelModel from './InterviewCancelModel';
+import Divider from '@/components/common/Divider';
+import { Button } from '@/components/ui/button';
 
 type Props = {};
 
 export default function BottomOrRightComponent({}: Props) {
+  //SECTION::0)LOGIC PART
+  const [isModelOpen, setIsModelOpen] = useState(false);
+  const [isInterviewCancel, setIsInterviewCancel] = useState(true);
+  // console.log({ isModelOpen });
+  // console.log({ isInterviewCancel });
   return (
     <section className="container-section-right">
       {/*SECTION 1)Close */}
-      <ClosedComponent />
+      <ClosedComponent
+        onClick={() => {
+          setIsModelOpen(prev => !prev);
+        }}
+      />
 
       {/*SECTION:: 2)Message section */}
       {/* 8:10-9:30=> 18-108 lines      */}
@@ -109,60 +123,88 @@ export default function BottomOrRightComponent({}: Props) {
 
       {/* SECTION:: 3)Bottom Input section */}
       {/* 9:45-10:10-11:31-12:17 */}
-      <section className="mb-element w-full rounded-sm bg-white px-2 py-2.5 mt-section  box-dropShadow">
-        <div className="flex items-center justify-between gap-2">
-          {/*COMMENT::3.1) Left section(+,3 images and input) */}
-          <div className="flex flex-1 gap-1 sm:gap-2">
-            <div className="border-r-[0.5px] border-[#D9D9D9] pr-2.5 md:border-r-[1px]">
-              <button className="aspect-square w-6 rounded-full border-[1px] border-[#E4E4E4] flex-center md:w-10">
-                <Image alt="Plus" src={Plus.src} width={50} height={50} className="w-1/2" />
-              </button>
+      {!isInterviewCancel ? (
+        <section className="mb-element w-full rounded-sm bg-white px-2 py-2.5 mt-section  box-dropShadow">
+          <div className="flex items-center justify-between gap-2">
+            {/*COMMENT::3.1) Left section(+,3 images and input) */}
+            <div className="flex flex-1 gap-1 sm:gap-2">
+              <div className="border-r-[0.5px] border-[#D9D9D9] pr-2.5 md:border-r-[1px]">
+                <button className="aspect-square w-6 rounded-full border-[1px] border-[#E4E4E4] flex-center md:w-10">
+                  <Image alt="Plus" src={Plus.src} width={50} height={50} className="w-1/2" />
+                </button>
+              </div>
+
+              <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+                <Image
+                  alt="Image"
+                  src={ImageUpload.src}
+                  width={40}
+                  height={40}
+                  className="aspect-square w-3 cursor-pointer sm:w-4 md:w-5  xl:w-6"
+                />
+                <Image
+                  alt="Email Sign"
+                  src={EmailSign.src}
+                  width={40}
+                  height={40}
+                  className="aspect-square w-3 cursor-pointer sm:w-4 md:w-5  xl:w-6"
+                />
+                <Image
+                  alt="Smile"
+                  src={Smile.src}
+                  width={40}
+                  height={40}
+                  className="aspect-square w-3 cursor-pointer sm:w-4 md:w-5  xl:w-6"
+                />
+              </div>
+
+              <input
+                type="text"
+                className="w-full flex-1 bg-transparent pl-0 text-xs outline-none md:pl-2 md:text-xs xl:text-base"
+                placeholder="Enter your message here..."
+              />
             </div>
 
-            <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+            {/*COMMENT:: 3.2) Right Send Button */}
+            <button className="rounded-[2px] bg-black px-2 py-2.5 text-white">
+              Send{' '}
               <Image
-                alt="Image"
-                src={ImageUpload.src}
-                width={40}
-                height={40}
-                className="aspect-square w-3 cursor-pointer sm:w-4 md:w-5  xl:w-6"
+                src={SendArrow.src}
+                alt="Send Arrow"
+                width={30}
+                height={30}
+                className="inline-flex w-2.5  md:w-4 xl:w-5 "
               />
-              <Image
-                alt="Email Sign"
-                src={EmailSign.src}
-                width={40}
-                height={40}
-                className="aspect-square w-3 cursor-pointer sm:w-4 md:w-5  xl:w-6"
-              />
-              <Image
-                alt="Smile"
-                src={Smile.src}
-                width={40}
-                height={40}
-                className="aspect-square w-3 cursor-pointer sm:w-4 md:w-5  xl:w-6"
-              />
-            </div>
-
-            <input
-              type="text"
-              className="w-full flex-1 bg-transparent pl-0 text-xs outline-none md:pl-2 md:text-xs xl:text-base"
-              placeholder="Enter your message here..."
-            />
+            </button>
+          </div>
+        </section>
+      ) : (
+        //COMMENT::3.2)Cancel Section
+        <section className="mt-section">
+          {/* 1)Interview End */}
+          <div className={cn('flex w-full items-center gap-3 mt-element md:gap-5')}>
+            <div className={cn('w-1/2 border border-[##DEDEDE]')}></div>
+            <p className="whitespace-nowrap text-14 text-[#706B6B] md:text-base">INTERVIEW END</p>
+            <div className={cn('w-1/2 border border-[##DEDEDE]')}></div>
           </div>
 
-          {/*COMMENT:: 3.2) Right Send Button */}
-          <button className="rounded-[2px] bg-black px-2 py-2.5 text-white">
-            Send{' '}
-            <Image
-              src={SendArrow.src}
-              alt="Send Arrow"
-              width={30}
-              height={30}
-              className="inline-flex w-2.5  md:w-4 xl:w-5 "
-            />
-          </button>
-        </div>
-      </section>
+          {/* 2)Go to Home Button */}
+          <Button
+            className="aspect-[106/40] h-10 w-[106px] text-14 font-normal text-[#A9A9A9] mt-section mb-section md:h-[66px] md:w-[182px] md:text-xl"
+            variant={'outline'}
+          >
+            Go to Home
+          </Button>
+        </section>
+      )}
+
+      {/* SECTION::4)Inteview Cancle Model */}
+      <InterviewCancelModel
+        isModelOpen={isModelOpen}
+        setIsModelOpen={setIsModelOpen}
+        isInterviewCancel={isInterviewCancel}
+        setIsInterviewCancel={setIsInterviewCancel}
+      />
     </section>
   );
 }

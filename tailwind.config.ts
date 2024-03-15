@@ -164,6 +164,9 @@ const config = {
         '.dashboard-gradient': {
           background: 'linear-gradient(239.18deg, #F7F3E8 5.68%, #FBF2EE 50.75%, #E0F6FB 101.98%)',
         },
+        '.dashboard-gradient-2': {
+          background: 'linear-gradient(109.22deg, #F7F6D5 2.68%, #CCF5E9 91.58%)',
+        },
         '.dashboard-sidebar-gradient': {
           background: 'linear-gradient(180deg, rgba(234, 246, 248, 0.25) 0%, #F6F5F3 100%)',
         },

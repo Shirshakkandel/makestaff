@@ -1,14 +1,12 @@
-'use client';
 import React, { ReactElement } from 'react';
-import NavSidebar from './components/NavSidebar';
-import NavMobile from './components/NavMobile';
-import Footer from './components/Footer';
+import NavSidebar from '../(management)/components/NavSidebar';
+import NavMobile from '../(management)/components/NavMobile';
 
 type Props = {
   children: ReactElement;
 };
 
-export default function Dashboard({ children }: Props) {
+export default function Layout({ children }: Props) {
   return (
     <main className="flex w-full flex-col overflow-x-hidden  bg-dashboardBackground  lg:flex-row">
       {/*COMMENT:: 1)Top or Left Section */}
@@ -20,10 +18,8 @@ export default function Dashboard({ children }: Props) {
         <NavMobile />
       </div>
 
-      <div className=" w-full flex-1 lg:w-[94vw]">
-        <section className="min-h-[90vh] ">{children}</section>
-        {/*COMMENT:: 3)Footer Section */}
-        <Footer />
+      <div className=" h-full w-full flex-1  lg:w-[94vw]">
+        <section className="h-full min-h-[90vh]">{children}</section>
       </div>
     </main>
   );
