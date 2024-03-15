@@ -16,7 +16,7 @@ type Props = {};
 export default function BottomOrRightComponent({}: Props) {
   //SECTION::0)LOGIC PART
   const [isModelOpen, setIsModelOpen] = useState(false);
-  const [isInterviewCancel, setIsInterviewCancel] = useState(true);
+  const [isInterviewCancel, setIsInterviewCancel] = useState(false);
   // console.log({ isModelOpen });
   // console.log({ isInterviewCancel });
   return (
@@ -124,7 +124,7 @@ export default function BottomOrRightComponent({}: Props) {
       {/* SECTION:: 3)Bottom Input section */}
       {/* 9:45-10:10-11:31-12:17 */}
       {!isInterviewCancel ? (
-        <section className="mb-element w-full rounded-sm bg-white px-2 py-2.5 mt-section  box-dropShadow">
+        <section className="w-full rounded-sm bg-white px-2 py-2.5 mt-section box-dropShadow  mb-element">
           <div className="flex items-center justify-between gap-2">
             {/*COMMENT::3.1) Left section(+,3 images and input) */}
             <div className="flex flex-1 gap-1 sm:gap-2">
